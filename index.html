@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/image/favicon-32x32.png">
+    <title>Проектное сообщество – Проекты сообщества</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="/assets/css/normalize.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <div class="wrapper-">
+        <header>
+            <div class="header">
+                <a href="/">
+                    <img class="logo" src="/assets/image/logo.jpeg" alt="Логотип">
+                </a>
+                <ul>
+                    <li><a href="/">На главную</a></li>
+                    <li><a href="/">Выход</a></li>
+                </ul>
+            </div>
+        </header>
+        
+        <main>
+            <section>
+                <div class="alert">
+                    <img src="/assets/image/alert.png" alt="alert">
+                    <div class="alert__message">
+                        В данный момент сайт работает в тестовом режиме. Если у вас есть предложения по его улучшению или вы заметили ошибку, пожалуйста, напишите об этом на почту
+                        <span>community@zdrav.mos.ru</span>
+                    </div>
+                </div>
+            </section>
+            
+            <div class="main__content">
+                <nav class="menu">
+                    <ul>
+                        <li>
+                            <span class="account_icon"></span>
+                            <a href="#">Моя страница</a>
+                        </li>
+                        <li>
+                            <span class="alert_icon"></span>
+                            <a href="#">Уведомления</a>
+                        </li>
+                        <li>
+                            <span class="participants_icon"></span>
+                            <a href="#">Участники</a>
+                        </li>
+                        <li>
+                            <span class="news_icon"></span>
+                            <a href="#">Новости</a>
+                        </li>
+                        <li>
+                            <span class="files_icon"></span>
+                            <a href="#" class="inactive">База Знаний <sup>*</sup></a>
+                        </li>
+                        <li>
+                            <span class="projects_icon bold"></span>
+                            <a href="#">Проекты</a>
+                        </li>
+                        <li>
+                            <span class="settings_icon"></span>
+                            <a href="#" class="inactive">Настройки <sup>*</sup></a>
+                        </li>
+                        <li><p><sup>*</sup>Данные разделы находятся в разработке</p></li>
+                    </ul>
+                </nav>
+                
+                <div class="projects">
+                    <div class="projects__header">Проекты сообщества</div>
+                    
+                    <div class="project__form">
+                        <form action="">
+                            <input type="text" class="project__form-sarch" name="search" placeholder="Поиск проектов">
+                        </form>
+                    </div>
+
+                    <div class="projects__categories">
+                        <button class="categories-button categories-active">Все Проекты</button>
+                        <button class="categories-button">&#128640 Набор команды</button>
+                        <button class="categories-button">&#128188 Проект в работе</button>
+                        <button class="categories-button">&#9989 Проект завершен</button>
+                    </div>
+
+                    <div class="projects__cards">
+                        <div class="projects__card">
+                            <img src="/assets/image/cards/robot.png" alt="картинка">
+                            <div class="projects__card-content">
+                                <div class="status">&#128188 Проект в работе</div>
+                                <div class="date">05.09.2021</div>
+                            </div>
+                            <div class="title">Цифровой паспорт: помощник в упаковке проектов</div>
+                        </div>
+
+                        <div class="projects__card">
+                            <img src="/assets/image/cards/welcome.png" alt="картинка">
+                            <div class="projects__card-content">
+                                <div class="status">&#128188 Проект в работе</div>
+                                <div class="date">05.09.2021</div>
+                            </div>
+                            <div class="title">Onboarding - цифровой сервис по адаптации участников</div>
+                        </div>
+
+                        <div class="projects__card">
+                            <img src="/assets/image/cards/people.png" alt="картинка">
+                            <div class="projects__card-content">
+                                <div class="status">&#128188 Проект в работе</div>
+                                <div class="date">05.09.2021</div>
+                            </div>
+                            <div class="title">Исследование проектной деятельности в сети: приглашаем участников сообщества в команду проекта</div>
+                        </div>
+
+                        <div class="projects__card">
+                            <img src="/assets/image/cards/notebook.png" alt="картинка">
+                            <div class="projects__card-content">
+                                <div class="status">&#128188 Проект в работе</div>
+                                <div class="date">05.09.2021</div>
+                            </div>
+                            <div class="title">Фестиваль проектов: серия вебинаров об успешных проектах участников сообщества</div>
+                            
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="conteiner">
+                <h3>Контакты</h3>
+                <div class="contacts"><span>Телефон:  </span><a href="tel:+7968711885"> +7 (968) 711 08 85</a></div>
+                <div class="contacts"><span>Почта:  </span><a href="mailto:community@zdrav.mos.ru"> community@zdrav.mos.ru</a></div>
+            </div>
+        </footer>
+    </div>
+    <!-- SCRIPTS -->
+</body>
+</html>

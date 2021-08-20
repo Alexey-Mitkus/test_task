@@ -1,0 +1,284 @@
+@import "fonts"
+
+* 
+    box-sizing: border-box
+
+body
+    font-family: "PT Sans", sans-serif
+    a
+        color: #000
+        text-decoration: none
+
+// HEADER 
+header
+    width: 100%
+    height: 110px
+    background-color: #fff
+    padding: 0 74px
+    display: flex
+    justify-content: center
+    align-items: center
+    .header
+        width: 1167px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 0
+    .logo
+        width: 194px
+        height: 73px
+    li
+        display: inline-block
+        a
+            display: block
+            margin-right: 20px
+            &:hover
+                text-decoration: underline
+        &:last-child
+            a
+                margin-right: 0 
+                text-decoration: none   
+
+// MAIN
+main
+    width: 100%
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    background-color: #E6E1DE
+    section
+        margin: 0 auto
+        padding: 11px 0
+        width: 1167px
+        // background-color: green
+        .alert
+            background-color: #C4C4C4
+            padding: 6px 0 6px 19px
+            display: flex
+            img
+                width: 38px
+                height: 36px
+                display: block
+            .alert__message
+                font-size: 14px
+                display: block
+                margin-left: 14px
+                line-height: 18px
+                font-weight: normal
+                span
+                    color: #0A4551
+    .main__content
+        width: 1167px
+        min-height: 983px
+        margin: 0 auto
+        margin-bottom: 67px
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        .menu
+            width: 170px
+            ul
+                padding: 0
+                margin: 0
+                color: #AAAAAA
+                list-style: none
+
+            li
+                display: flex
+                align-items: center
+                flex-direction: row
+                padding: 4px 0
+                .account_icon, .alert_icon, .participants_icon, .news_icon, .files_icon, .projects_icon, .settings_icon
+                    display: block
+                    width: 25px
+                    height: 25px
+                    background-repeat: no-repeat
+                    background-position: center center
+            
+
+                .account_icon
+                    background-image: url('/assets/image/icons/account.png') 
+                    background-size: 22px 22px
+                .alert_icon
+                    background-image: url('/assets/image/icons/alert.png') 
+                    background-size: 19px 22px
+                .participants_icon
+                    background-image: url('/assets/image/icons/participants.png') 
+                    background-size: 22px 13px
+                .news_icon
+                    background-image: url('/assets/image/icons/news.png') 
+                    background-size: 22px 22px
+                .files_icon
+                    background-image: url('/assets/image/icons/files.png') 
+                    background-size: 22px 18px
+                .projects_icon
+                    background-image: url('/assets/image/icons/projects.png')
+                    background-size: 22px 21px
+                .settings_icon
+                    background-image: url('/assets/image/icons/settings.png')
+                    background-size: 22px 22px
+
+                &:last-child
+                    margin: 0
+                    padding-top: 3px
+                    font-size: 10px
+                    line-height: 13px
+                    sup
+                       top: 0
+                       font-size: 10px 
+                a
+                    display: block
+                    margin-left: 9px
+                    font-size: 18px
+                    line-height: 23px
+                    color: #525252
+                    &:hover
+                        font-weight: bold
+                    sup
+                        top: 0
+                        font-size: 18px 
+                        margin-left: -5px
+            .inactive 
+                color: #AAAAAA !important
+                &:hover
+                    font-weight: normal
+                    cursor:  wait
+        
+        .projects 
+            width: 971px
+            min-height: 500px
+            background-color: #fff
+            .projects__header
+                height: 59px
+                background-color: #0A4551
+                color: #fff
+                font-style: normal
+                font-weight: bold
+                font-size: 24px
+                line-height: 15px
+                padding: 19px 0 14px 30px
+
+            .project__form
+                display: block
+                max-width: 881px
+                max-height: 33px
+                width: 100%
+                margin: 15px 47px 0 43px
+                input
+                    background: url(/assets/image/icons/search.png) no-repeat scroll 18px 8px
+                    background-size: 16px 16px
+                    padding-left: 46px 
+                    width: 100%
+                    height: 33px   
+                    font-size: 14px
+                    line-height: 18px
+                    border: 1px solid #BFBFBF
+                    border-radius: 5px
+            
+            .projects__categories
+                display: flex
+                justify-content: flex-start
+                flex-wrap: wrap
+                width: 100%
+                min-height: 33px
+                margin: 17px 47px 0 43px
+                .categories-button
+                    display: block
+                    margin-right: 15px
+                    padding: 6px 10px 
+                    font-style: normal
+                    font-weight: bold
+                    font-size: 14px
+                    background-color: #E8E8E8
+                    border: none
+                    border-radius: 12px
+                    text-transform: uppercase
+                    &:hover
+                        cursor: pointer
+                .categories-active
+                    color: #fff
+                    background-color: #0A4551
+
+            .projects__cards
+                display: flex
+                justify-content: flex-start
+                justify-content: space-between
+                flex-wrap: wrap
+                width: 881px
+                height: 33px
+                margin: 17px 33px 0 43px
+                .projects__card
+                    width: 278px
+                    min-height: 275px
+                    background: #FFFFFF
+                    border: 1px solid #C4C4C4
+                    border-radius: 10px
+                    margin-bottom: 19px
+                    &:hover
+                        background: #F5F5F5
+                    img
+                        display: block
+                        width: 100%
+                        height: 166px
+                        margin-left: auto
+                        margin-right: auto
+                        border-radius: 10px
+                    .projects__card-content
+                        display: flex
+                        justify-content: space-between
+                        margin: 5px 14px 10px 10px
+                    .status
+                        text-transform: uppercase
+                        font-style: normal
+                        font-weight: bold
+                        font-size: 12px
+                        // line-height: 26px
+                        color: #9A1B1F
+                    .date
+                        font-weight: bold
+                        font-size: 12px
+                        line-height: 14px
+                    .title
+                        font-style: normal
+                        font-weight: bold
+                        font-size: 16px
+                        line-height: 18px
+                        margin: 0 10px 10px
+
+
+
+
+
+
+
+// FOOTER
+footer
+    margin: auto auto 0 auto
+    width: 100%
+    background: #0A4551
+    padding: 113px 0
+    text-align: center
+    
+    .conteiner
+        width: 100%
+        max-width: 1240px
+        margin: 0 auto
+        padding: 0 20px
+        h3  
+            margin-bottom: 80px
+            font-weight: normal
+            font-size: 38px
+            color: #fff
+            margin-top: 0
+        .contacts
+            display: flex
+            flex-wrap: wrap
+            justify-content: center
+            padding-bottom: 10px
+            a, span
+                color: #fff
+                font-size: 20px
+            span
+                margin: 0 5px    
+            a:hover
+                text-decoration: underline
