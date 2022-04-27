@@ -1,0 +1,665 @@
+.services__wrapper
+    width: 100%
+
+// services header
+.services__header
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    padding: 32px 34px
+    width: 100%
+    min-height: 208px
+    border-radius: 4px
+    position: relative
+    background-image: url('../../images/services/services_background.png')
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: top left
+    &-content
+        width: 550px
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        z-index: 1
+        h1
+            font-family: 'PT Sans'
+            font-style: normal
+            font-weight: bold
+            font-size: 42px
+            line-height: 50px
+            display: flex
+            text-align: left
+            margin: 0
+            margin-bottom: 12px
+            color: #FFFFFF
+        h3
+            font-family: 'PT Sans'
+            font-style: normal
+            font-weight: normal
+            font-size: 20px
+            line-height: 26px
+            color: #FFFFFF
+            text-align: left
+            margin: 0
+    img
+        position: absolute
+        right: 76px
+        width: 177px
+        height: 178px
+        z-index: 0
+
+
+// Services content    
+.services__content
+    width: 100%
+    height: auto
+    display: flex
+    flex-direction: column
+    justify-content: center
+    padding: 30px 0px 50px
+    background-color: #FAF9F7
+
+.services__items
+    width: 100%
+    height: auto
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    flex-wrap: wrap
+    .services__item, .services__item-innactive
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: flex-start
+        position: relative
+        width: 32%
+        height: 265px
+        background: #FFFFFF
+        border-radius: 4px
+        margin-bottom: 20px
+        padding: 22px 24px 10px 21px
+        cursor: pointer
+        transition: all 0.3s
+        font-family: 'PT Sans'
+        font-style: normal
+        .number
+            position: absolute
+            top: 16px
+            right: 16px
+            font-weight: bold
+            font-size: 13px
+            line-height: 20px
+            color: #146B7F
+        img
+            display: block
+            width: 52px
+            height: 52px
+            margin-bottom: 30px
+        h3
+            margin: 0
+            padding: 0
+            margin-bottom: 8px
+            text-align: left
+            font-weight: bold
+            font-size: 20px
+            line-height: 26px
+            color: #2B3E42
+        p
+            font-weight: normal
+            font-size: 17px
+            line-height: 24px
+            color: #334043
+            margin-bottom: 10px
+        button
+            font-weight: normal
+            font-size: 16px
+            line-height: 22px
+            color: #C22A2E
+            margin-bottom: 10px
+    .services__item-innactive
+        position: relative
+        .number
+            color: #B3B5BA
+        img
+            display: block
+            width: 52px
+            height: 52px
+            margin-bottom: 30px
+        h3
+            color: #B3B5BA
+        p
+            margin-bottom: 40px
+            color: #B3B5BA
+        .innactive-info
+            display: flex
+            flex-direction: row
+            align-items: center
+        .service-tooltip
+            width: 16px
+            height: 16px
+            margin: 0 0 7px 14px
+            cursor: pointer
+        button
+            color: #B3B5BA
+        .innactive-tooltip
+            display: flex
+            align-items: center
+            justify-content: center
+            position: absolute
+            width: 240px
+            height: 82px
+            bottom: 50px
+            left: 70px
+            padding: 16px
+            background: #FFFFFF
+            border-radius: 4px
+            font-family: 'PT Sans'
+            font-style: normal
+            font-weight: normal
+            font-size: 15px
+            line-height: 20px
+            color: #334043
+            border: 1px solid #F7F7F7
+            box-sizing: border-box
+            opacity: 0
+            visibility: hidden
+            box-shadow: 0px -1px 24px rgba(56, 31, 1, 0.12), 0px 4px 24px rgba(56, 31, 1, 0.12)
+            p
+                margin: 0
+                color: #334043
+            &-polygon
+                width: 16px
+                height: 16px
+                transform: rotate(45deg)
+                position: absolute
+                left: 18%
+                bottom: -6px
+                background: #FFFFFF
+        .service-tooltip:hover~ .innactive-tooltip,
+        .service-tooltip:focus~ .innactive-tooltip,
+        .service-tooltip:active~ .innactive-tooltip
+            opacity: 1
+            visibility: visible
+
+
+
+    .services__item:hover
+        box-shadow: -2px 0px 12px rgba(56, 31, 1, 0.12), 0px 8px 24px rgba(56, 31, 1, 0.12)
+        transition: all 0.3s
+        transform: translateY(-10px)
+        h3, p
+            color: #146B7F
+
+// Модальное окно Цифровых Сервисов 
+.popup__content-services
+    position: relative
+    width: 100%
+    max-width: 880px
+    padding: 32px
+    background: #FFFFFF
+    border-radius: 4px
+    font-family: 'PT Sans'
+    font-style: normal
+    transition: all 0.5s ease 0s
+    opacity: 0
+    transform: perspective(600px) translate(0px, -100%)
+    .popup__close
+        position: absolute
+        right: 20px
+        top: 20px
+        cursor: pointer
+        transform: rotate(0deg)
+        transition: transform 0.3s
+        &:hover
+            transform: rotate(180deg)
+            transition:  transform 0.3s
+    h2
+        font-weight: bold
+        font-size: 32px
+        line-height: 40px
+        color: #2B3E42
+        text-align: left
+        margin-bottom: 12px
+    p
+        font-weight: normal
+        font-size: 20px
+        line-height: 28px
+        color: #334043
+    a:hover
+        text-decoration: none
+    
+    .services__row-btns
+        display: flex
+        flex-direction: row
+        margin-top: 42px
+        a
+            display: block
+            &:first-child
+                margin-right: 24px
+
+    .services__popup-guest-p
+        width: 100% 
+        padding-top: 24px
+        border-top: 1px solid #F0EEE9
+        span
+            font-weight: bold
+
+    // Формы в Модальном окне
+    .input-radio
+        margin-top: 14px
+        margin-bottom: 10px
+        .custom-radio
+            position: absolute
+            z-index: -1
+            opacity: 0
+            margin-right: 14px
+        .custom-radio + label 
+            display: inline-flex
+            align-items: center
+            user-select: none
+            cursor: pointer
+        label
+            margin-right: 38px
+            font-weight: normal
+            font-size: 17px
+            line-height: 24px
+        .custom-radio + label::before 
+            content: ''
+            display: inline-block
+            width: 1em
+            height: 1em
+            flex-shrink: 0
+            flex-grow: 0
+            border: 1px solid #adb5bd
+            border-radius: 50%
+            margin-right: 0.5em
+            background-repeat: no-repeat
+            background-position: center center
+            background-size: 50% 50%
+        .custom-radio:focus+label::before 
+            box-shadow: 0 0 0 0.2rem rgba(155, 65, 49, 0.25)
+            
+        .custom-radio:not(:disabled):active + label::before
+            background-color: #c02c3181
+            border-color: #c02c3181
+        .custom-radio:focus + label::before 
+            box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25)
+        .custom-radio:checked + label::before 
+            box-sizing: border-box
+            border: 6px solid #C22A2E
+        
+        .custom-radio:disabled + label::before 
+            background-color: #c02c3181
+    
+    .input-field
+        max-width: 536px
+        height: 64px
+        position: relative
+        margin-top: 12px
+        padding: 8px 16px
+        padding-bottom: 0
+        border: 1px solid #E7E7E7
+        border-radius: 4px
+        input 
+            font-size: 17px
+            display: block
+            width: 100%
+            height: 100%
+            border: none
+            font-size: 17px
+            line-height: 24px
+            color: #334043
+        &:focus
+            outline: none
+        label 
+            color: #919399
+            font-size: 15px
+            position: absolute
+            pointer-events: none
+            left: 16px
+            top: 15px
+            transition: 0.2s ease all
+
+            /* active state */
+        input:focus ~ label, input:valid ~ label
+            background-color: #fff
+            top: 0px
+            font-size: 12px
+            color: #919399
+        .bar 
+            position: relative
+            display: block
+            width: 100%
+            
+        .bar:before, .bar:after 
+            content: ""
+            height: 2px
+            width: 0
+            bottom: 0
+            position: absolute
+            background: #C22A2E
+            transition: 0.2s ease all
+        .bar:before 
+            left: 50%
+        
+        .bar:after 
+            right: 50%
+                
+        input:focus ~ .bar:before,
+        input:focus ~ .bar:after 
+            width: 50%
+
+    textarea
+        width: 536px
+        height: 86px
+        border: 1px solid #E7E7E7
+        box-sizing: border-box
+        border-radius: 4px
+        margin-top: 30px
+        padding: 16px
+        font-size: 15px
+        line-height: 22px
+        color: #919399
+    
+    .reserch-form
+        margin-top: 12px
+        position: relative
+    
+    .content-theme
+        position: relative
+        max-width: 536px
+        height: 98px
+        border: 1px solid #E7E7E7
+        box-sizing: border-box
+        border-radius: 4px
+        padding: 20px 16px 10px
+        .theme
+            position: absolute
+            color: #919399
+            top: 20px
+            left: 16px
+            font-size: 17px
+            line-height: 24px
+            transition: 0.2s ease all
+            z-index: -1
+        textarea
+            width: 100%
+            height: 100%
+            border: none
+            margin-top: 0px
+            font-size: 17px
+            line-height: 24px
+            padding: 0
+            color: #334043
+        textarea:focus ~ .theme, textarea:valid ~ label
+            top: 0px
+            font-size: 14px
+            color: #919399
+
+    ol
+        margin-left: 16px
+        margin-bottom: 0
+        li 
+            list-style-type: decimal
+            font-size: 17px
+            line-height: 24px
+            color: #4C595C
+            margin-bottom: 10px
+            &:last-child
+                margin-bottom: 0
+
+    .services__popup-how-work
+        label
+            display: block
+            width: 100%
+            height: 40px
+            margin-bottom: 0
+            padding-top: 8px 
+            font-weight: bold
+            font-size: 17px
+            line-height: 24px
+            color: #4C595C
+        ol
+            padding-left: 10px
+            margin-bottom: 32px
+    
+    // Сообщение об ошибке
+    .services__popup-error-msg
+        margin: 4px 0 0 2px
+        display: flex
+        align-items: center
+        font-family: PT Sans
+        font-style: normal
+        font-weight: normal
+        font-size: 15px
+        line-height: 20px
+        color: #ED0A34
+    .error-border
+        border: 1px solid #ED0A34
+    .error-icon
+        background-image: url('../../images/services/error_icon.svg')
+        width: 24px
+        height: 24px
+        position: absolute
+        top: 20px
+        right: 10px
+
+    // Уведомление о том, что заявка приянта
+    .services__popup-done
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding: 20px 0
+        width: 100%
+        img
+            margin-bottom: 22px
+        button
+            min-width: 196px
+    
+
+    .services__popup-content-status
+        display: flex
+        flex-direction: row
+        justify-content: flex-start
+        align-items: center
+        margin-bottom: 24px
+        margin-top: 28px
+        max-width: 536px
+        height: 30px
+        border-bottom: 2px solid #E7E7E7
+        color: #2B3E42
+        font-family: 'PT Sans'
+        font-style: normal
+        font-size: 17px
+        line-height: 24px
+        cursor: pointer
+        .status
+            display: flex
+            justify-content: center
+            margin-right: 52px
+            height: 34px
+            width: auto
+            cursor: pointer
+        .active
+            font-weight: bold
+            color: #C23D3C
+            position: relative
+            border-radius: 4px
+            border-bottom: 4px solid #C23D3C
+            cursor: pointer
+            
+.popup.open
+    opacity: 1
+    visibility: visible  
+.popup.open .popup__content-services, .popup.open .digital-idea__popup
+    transform: perspective(600px) translate(0px, 0%)
+    opacity: 1
+
+
+// MEDIA
+@media screen and (max-width: 1190px) and (min-width: 992px)
+    .services__header
+        img
+            right: 25px
+
+    .services__items
+        .services__item, .services__item-innactive
+            width: 49%
+
+@media screen and (max-width: 1060px) and (min-width: 992px)
+    .services__header
+        img
+            width: 90px
+            height: 92px
+            right: 40px
+
+@media screen and (max-width: 992px) and (min-width: 769px)
+    .services__items
+        .services__item, .services__item-innactive
+            width: 32%
+
+@media screen and (max-width: 846px) and (min-width: 745px)
+    .services__header
+        img
+            width: 90px
+            height: 92px
+            right: 40px
+
+@media screen and (max-width: 768px)
+    .services__header
+        width: auto
+        height: 172px
+        padding: 24px 
+        margin: 0 24px
+        background-color: #FAF9F7
+        background-position: top center 
+        &-content
+            h1
+                font-size: 36px
+                
+    .services__items
+        justify-content: space-between
+        padding: 0 24px
+        .services__item, .services__item-innactive
+            width: 49%
+    
+    .popup__content-services
+        padding: 32px 24px
+        h2
+            font-size: 28px
+        p
+            font-size: 17px
+
+@media screen and (max-width: 745px)
+    .services__header
+        img
+            display: none
+
+@media screen and (max-width: 630px)
+    .services__header    
+        width: auto
+        padding: 24px 16px 
+        margin: 0 24px
+        &-content
+            width: 100%
+            h1
+                font-size: 32px
+                line-height: 40px
+                margin-bottom: 12px
+            h3
+                font-size: 17px
+                line-height: 24px  
+    .services__items
+        justify-content: space-between
+        padding: 0 24px
+        .services__item, .services__item-innactive
+            width: 100%
+
+@media screen and (max-width: 450px)
+    .popup__content-services 
+        .input-radio
+            display: flex
+            flex-direction: column
+
+@media screen and (max-width: 425px)
+    .services__header
+        width: 100%
+        margin: 0
+        height: 172px
+        padding: 24px 16px 
+        background-position: top center
+        &-content
+            width: 100%
+            h1
+                font-size: 32px
+                line-height: 40px
+                margin-bottom: 12px
+            h3
+                font-size: 17px
+                line-height: 24px  
+
+    .services__items
+        justify-content: center
+        padding: 0 16px
+        .services__item, .services__item-innactive
+                width: 100%
+                height: 242px
+                justify-content: space-between
+                img
+                    width: 64px
+                    height: 64px
+                    margin-bottom: 10px
+                    font-size: 20px
+                p
+                    margin-bottom: 0
+                    font-size: 15px
+                button
+                    font-size: 15px
+                    margin-bottom: 5px
+                    margin-top: 22px
+    
+    .popup__content-services
+        padding: 22px 16px
+        h2
+            font-size: 24px
+        p
+            font-size: 15px
+        .services__popup-done
+            padding: 0
+        button
+            margin-top: 20px
+        
+
+@media screen and (max-width: 320px)
+    .services__header
+        margin: 0
+        &-content
+            width: 100%
+            h1
+                font-size: 28px
+                line-height: 36px
+                margin-bottom: 8px
+            h3
+                font-size: 15px
+                line-height: 20px  
+
+    .services__items
+        justify-content: center
+        .services__item, .services__item-innactive
+            width: 100%
+            height: 214px
+            justify-content: space-between
+            img
+                width: 52px
+                height: 52px
+                margin-bottom: 10px
+                font-size: 17px
+            p
+                margin-bottom: 0
+                font-size: 13px
+            button
+                margin-bottom: 5px
+                font-size: 14px
+
+    

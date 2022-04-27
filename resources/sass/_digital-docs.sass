@@ -1,0 +1,794 @@
+select:focus-visible
+    outline: none
+// Сообщение об ошбке
+.difital-idea__form-error
+    font-family: PT Sans
+    font-style: normal
+    font-weight: normal
+    font-size: 15px
+    line-height: 20px
+    color: #F70330
+// Цифровая идея (Digital idea)
+.digital-idea__content, .digital__content
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+    width: 100%
+    padding: 0
+    background: #FFF
+    margin-bottom: 100px
+    .digital-idea__component, .digital__component
+        width: 100%
+        margin: 0
+        min-height: 300px
+        
+    .digital-idea__welcome-card, .digital__welcome-card
+        position: relative
+        width: 100%
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        align-items: flex-start
+        padding: 32px
+        background-color: #fff
+        border-radius: 4px
+        h3
+            margin: 0
+            padding: 0
+            text-align: left
+            font-family: "PT Sans"
+            font-weight: bold
+            font-size: 36px
+            line-height: 100%
+            color: #253639
+        p
+            font-family: "PT Sans"
+            font-size: 20px
+            line-height: 26px
+            color: #353432
+            margin-bottom: 10px
+
+    // Форма опросника
+    .digital-idea__forms, .digital__forms
+        padding: 32px
+    .digital-idea__form, .digital__form
+        max-width: 660px
+        height: auto
+        padding: 0
+        background-color: #fff
+        font-family: "PT Sans"
+        h3
+            text-align: left
+            font-weight: bold
+            margin-bottom: 12px
+            font-size: 32px
+
+        .digital-idea__form-exit, .digital__form-exit
+            display: block
+            position: absolute
+            top: 65px
+            right: 15px
+            cursor: pointer
+            font-size: 16px
+            line-height: 140%
+            text-decoration-line: underline
+            color: #0A4551
+            text-decoration: underline
+        .digital-idea__form-fields, .digital__form-fields
+            margin-top: 30px
+            display: flex
+            flex-direction: column
+            justify-content: flex-start
+            align-items: flex-start
+            margin-bottom: 50px
+            font-family: PT Sans
+            font-style: normal
+            label
+                font-weight: bold
+                position: relative
+                font-size: 20px
+                line-height: 26px
+                color: #253639
+                margin: 0 14px 12px 0
+                .info-circle
+                    position: relative
+                    top: -3px
+                    width: 16px
+                    height: 16px
+                    margin-left: 10px
+                    cursor: pointer
+
+            &-input
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+                align-items: center
+                flex-wrap: nowrap
+                position: relative
+                width: 100%
+            input, select
+                width: 100%
+                max-width: 660px
+                padding: 16px 16px 24px
+                font-size: 15px
+                line-height: 24px
+                color: #343F42
+                border: 1px solid #E7E7E7
+                box-sizing: border-box
+                border-radius: 4px
+                margin-bottom: 40px
+            textarea
+                width: 100%
+                max-width: 660px
+                height: 156px
+                padding: 16px 16px 28px
+                font-size: 15px
+                line-height: 24px
+                color: #343F42
+                border: 1px solid #E7E7E7
+                box-sizing: border-box
+                border-radius: 4px
+
+            select
+                option
+                    outline: none
+                    border: none
+            select:active, select:focus-visible
+                outline: none
+
+            .digital-delete-field
+                position: absolute
+                top: -22px
+                right: 2px
+                height: 20px
+                width: 52px
+                cursor: pointer
+                font-family: PT Sans
+                font-style: normal
+                font-weight: normal
+                font-size: 15px
+                line-height: 20px
+                color: #AE2726
+            
+            .digital-idea__form-description, .digital__form-description
+                height: 340px
+
+            .digital-idea__form-add-field, .digital__form-add-field
+                display: flex
+                flex-direction: row
+                justify-content: flex-start
+                align-items: center
+                width: 300px
+                margin: -30px 0 0
+                cursor: pointer
+                z-index: 1
+                img
+                    margin-right: 18px
+                    cursor: pointer
+                span
+                    font-size: 17px
+                    line-height: 24px
+                    color: #363638
+                    cursor: pointer
+
+            .digital-idea__form-textaria-big, .digital__form-textaria-big
+                height: 323px
+
+            .digital-idea__form-fields-half-block, .digital__form-fields-half-block
+                display: flex
+                flex-direction: row
+                justify-content: space-between
+                width: 100%
+                margin-top: 40px
+                .half
+                    width: 300px
+                    display: flex
+                    flex-direction: column
+                    align-items: flex-start
+
+            // Hospitals
+            .digital-idea__hospitals, .digital__hospitals 
+                display: flex
+                flex-direction: row
+                width: 100%
+                border: 1px solid #E7E7E7
+                .digital-idea__hospitals > .ui.fluid.dropdown, .search
+                    width: 100%
+                    height: 100%
+                .ui.selection.dropdown
+                    width: 100% !important
+                    padding: 16px 16px 24px
+                    background: #fff
+                    border-radius: 4px
+                    font-size: 18px
+                    line-height: 140%
+                    border: none
+                .ui.search.selection.dropdown>input.search
+                    padding: 16px 16px 24px 
+                .ui.dropdown:not(.button)>.default.text
+                    font-size: 15px
+                    line-height: 24px
+                    color: #343F42
+                .ui.selection.dropdown>.dropdown.icon   
+                    top: 20px        
+        // Блок с кнопками в опроснике 
+        .buttons-line
+            width: 100%
+            min-height: 48px
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            align-items: center
+        h4
+            text-align: left
+            font-weight: bold
+            color: #253639
+            font-size: 32px
+            line-height: 40px   
+
+
+
+        .digital-idea__triple, .digital__triple
+            input
+                width: 420px
+                margin-right: 10px
+            select
+                width: 33%
+                background-image: url('../../public/images/digital-idea/select-arrow-down.png')
+                background-repeat: no-repeat
+                background-position: 180px 12px
+                cursor: pointer
+                option
+                    margin-top: 5px
+                    border: none
+        .digital-idea__form-metrics, .digital__form-metrics
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            align-items: flex-end
+            width: 100%
+            &-block1
+                width: 100%
+                margin-right: 20px
+                &-input
+                    position: relative
+                input
+                    margin-bottom: 40px
+            &-block2
+                display: flex
+                flex-direction: column
+                width: 220px
+                position: relative
+                div
+                    display: flex
+                    flex-direction: row
+                    position: relative
+                    height: 106px
+                input
+                    width: 100%
+                    margin-bottom: 40px
+                    text-align: left
+                div:focus-visible
+                    outline: none
+
+            .digital-idea__form-line-block1, .digital__form-line-block1
+                width: 75%
+                margin-right: 20px
+                input
+                    width: 100%
+                    margin-bottom: 20px
+            .digital-idea__form-line-block2, .digital__form-line-block2
+                width: 25%
+                div
+                    display: flex
+                    flex-direction: row
+                    height: 106px
+                input
+                    width: 100%
+                    margin-bottom: 20px
+                    text-align: left
+            .digital-idea__form-plan-block1, .digital__form-plan-block1
+                width: 77%
+                margin-right: 20px
+                input
+                    width: 100%
+                    margin-bottom: 20px
+            .digital-idea__form-plan-block2, .digital__form-plan-block2
+                width: 50%
+                div
+                    display: flex
+                    flex-direction: row
+                    width: 100%
+                    justify-content: space-between
+                input
+                    margin-bottom: 20px
+                    text-align: left
+                    cursor: pointer
+
+        .digital-idea__form-btns, .digital__form-btns
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            margin-bottom: 30px
+            display: flex
+            button
+                display: flex
+                flex-direction: row
+                flex-wrap: nowrap
+                align-items: center
+                background-color: #0A4551
+                font-style: normal
+                font-weight: bold
+                font-size: 18px
+                color: #fff
+                border-radius: 100px
+                padding: 10px 20px
+                transition: box-shadow 0.4s
+                span
+                    display: block
+                    width: 24px
+                    height: 24px
+
+.digital-idea__popup, .digital__popup
+    width: 895px
+    display: flex
+    flex-direction: column
+    position: relative
+    padding: 32px
+    background-color: #fff
+    font-family: 'PT Sans'
+    font-style: normal
+    border-radius: 4px
+    margin-bottom: 30px 
+    transition: all 0.5s ease 0s
+    opacity: 0
+    transform: perspective(600px) translate(0px, -100%)
+    &-header
+        width: 100%
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        border-radius: 10px 10px 0 0
+        &-title
+            display: flex
+            flex-direction: row
+            align-items: center
+        h3  
+            font-style: normal
+            font-weight: bold
+            font-size: 28px
+            line-height: 36px
+            color: #253639
+            margin: 0 20px 0 0
+            align-self: flex-end
+    .reduct-on
+        background-color: rgba(231, 231, 231, 0.2) 
+        padding: 12px
+    &-content
+        width: 100%
+        .fields-input-title
+            display: flex
+            flex-direction: row
+            justify-content: center
+            align-items: center
+            height: 100%
+            width: 100%
+            textarea
+                width: 100%
+                font-size: 20px
+                line-height: 26px
+                color: #253639
+            .popup-title
+                font-weight: bold
+        &-status
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            align-items: center
+            background-color: #fff
+            div
+                width: 30%
+            input
+                padding: 16px 12px 16px 0
+
+        &-desc
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            align-items: center
+            width: 100%
+            margin: 15px 0
+        &-name, &-date, &-dates
+            display: flex
+            flex-direction: column
+            flex-wrap: nowrap
+            align-items: flex-start
+            min-height: 30px
+            p
+                font-weight: bold
+                font-size: 20px
+                line-height: 26px
+                color: #253639
+                margin: 4px 10px 12px 0
+            input
+                // background-color: #e5e8f3
+                // background: rgba(231, 231, 231, 0.2)
+                border-radius: 4px
+                padding: 16px 16px 28px
+                min-height: 64px
+                width: 100%
+            textarea
+                width: 100%
+                min-height: 60px
+                overflow-y: auto
+        &-name
+            width: 100%
+            display: flex
+            align-items: flex-start
+            &-title
+                background-color: #e5e8f3
+        &-date
+            display: flex
+            align-items: flex-start
+            width: 231px
+        &-dates
+            display: flex
+            flex-direction: row
+            align-items: flex-start
+            width: auto
+        h4
+            width: 100%
+            text-align: left
+            padding: 12px 9px
+            font-weight: bold
+            font-size: 20px
+            line-height: 26px
+            color: #FFFFFF
+            background: #146B7F
+            border-radius: 4px
+        h5
+            margin: 24px 0 12px
+            padding: 0
+            text-align: left
+            font-weight: bold
+            font-size: 17px
+            line-height: 24px
+            font-size: 20px
+            color: #253639
+        &-block
+            display: flex
+            flex-direction: row
+            align-items: flex-start
+            position: relative
+            width: 100%
+            padding: 5px 0 0 9px
+            min-height: 40px
+            background: rgba(231, 231, 231, 0.2)
+            border-radius: 4px
+            textarea
+                width: 100%
+        .digital-popup__form-fields-input, .digital__form-fields-input
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            align-items: center
+            flex-wrap: nowrap
+            position: relative
+            width: 100%
+            input
+                width: 100%
+                padding: 16px 16px 24px
+                font-size: 15px
+                line-height: 24px
+                color: #343F42
+                border: 1px solid #E7E7E7
+                box-sizing: border-box
+                border-radius: 4px
+                margin-bottom: 40px
+            .digital-delete-field
+                position: absolute
+                top: -20px
+                right: 2px
+                height: 20px
+                width: 52px
+                cursor: pointer
+                font-family: PT Sans
+                font-style: normal
+                font-weight: normal
+                font-size: 15px
+                line-height: 20px
+                color: #AE2726
+        .digital-idea__form-add-field, .digital__form-add-field
+            display: flex
+            flex-direction: row
+            justify-content: flex-start
+            align-items: center
+            width: auto
+            margin: -30px 0 0
+            cursor: pointer
+            z-index: 1
+            position: relative
+            img
+                margin-right: 18px
+                cursor: pointer
+            span
+                font-size: 17px
+                line-height: 24px
+                color: #363638
+                cursor: pointer
+        pre
+            font-family: "PT Sans"
+            font-style: normal
+            font-weight: normal
+            font-size: 20px
+            line-height: 140%
+            word-wrap: break-word
+            white-space: pre-wrap
+        &-input
+            width: 100%
+            padding: 0 10px
+            min-height: 40px
+            background: #e5e8f3
+            border-bottom: 2px solid #9B312C 
+        &-add
+            display: flex
+            flex-direction: row
+            justify-content: flex-start
+            align-items: center
+            margin: 10px 0 20px
+            cursor: pointer
+            width: max-content
+            span
+                margin-left: 15px
+                font-weight: bold
+                font-size: 20px
+                line-height: 100%
+                color: #0A4551
+        &-interest
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            flex-wrap: nowrap
+            align-items: center
+            width: 100%
+            h5
+                margin: 0 0 12px
+            .digital-idea__popup-content-role, .digital__popup-content-role
+                display: flex
+                flex-direction: column
+                flex-wrap: nowrap
+                align-content: flex-start
+                justify-content: center
+                align-items: flex-start
+                width: 30%
+                margin-right: 30px
+                div
+                    width: 100%
+                    display: flex
+                    flex-direction: row
+                    position: relative
+                    &:focus-visible
+                        outline: none
+                select, span, input
+                    width: 100%
+                    padding: 16px 16px 24px
+                    font-size: 15px
+                    line-height: 24px
+                    color: #343F42
+                    border: 1px solid #E7E7E7
+                    box-sizing: border-box
+                    border-radius: 4px
+                    margin-bottom: 40px
+            .digital-idea__popup-content-name, .digital__popup-content-name
+                display: flex
+                flex-direction: column
+                flex-wrap: nowrap
+                align-content: flex-start
+                justify-content: center
+                align-items: flex-start
+                width: 70%
+                div
+                    width: 100%
+                    position: relative
+                    .digital-delete-field
+                        position: absolute
+                        top: -20px
+                        right: 2px
+                        width: 52px
+                        height: 20px
+                        cursor: pointer
+                        font-family: PT Sans
+                        font-style: normal
+                        font-weight: normal
+                        font-size: 15px
+                        line-height: 20px
+                        color: #AE2726
+                input
+                    width: 100%
+                    padding: 16px 16px 24px
+                    font-size: 15px
+                    line-height: 24px
+                    color: #343F42
+                    border: 1px solid #E7E7E7
+                    box-sizing: border-box
+                    border-radius: 4px
+                    margin-bottom: 40px
+        &-resources
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            flex-wrap: nowrap
+            align-items: center
+            width: 100%
+            margin-bottom: 20px
+            &-name
+                display: flex
+                flex-direction: column
+                flex-wrap: nowrap
+                align-content: flex-start
+                justify-content: center
+                align-items: flex-start
+                width: 70%
+                margin-right: 30px
+            &-index
+                display: flex
+                flex-direction: column
+                flex-wrap: nowrap
+                align-content: flex-start
+                justify-content: center
+                align-items: flex-start
+                width: 30%
+        .digital-idea__popup-content-team-mates, .digital__popup-content-team-mates
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            flex-wrap: wrap 
+            width: 100%
+            .digital-idea__popup-content-team-mate, .digital__popup-content-team-mate
+                width: 45%
+                min-width: 350px
+                margin-bottom: 10px
+                align-items: flex-start
+                padding: 5px 10px 0
+                min-height: 40px
+                background: #e5e8f3
+                border-bottom: 2px solid #9B312C
+        .digital-idea__popup-metrics, .digital__popup-metrics
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            align-items: flex-end
+            flex-wrap: nowrap
+            width: 100%
+            padding: 10px 0
+            &-name, &-target, &-before, &-after
+                display: flex
+                flex-direction: column
+            &-name
+                width: 35%
+                h5
+                    margin-bottom: 25px
+            &-target, &-before, &-after
+                width: 20%
+                p
+                    font-weight: bold
+                    font-size: 14px
+                span
+                    display: block
+                    width: 100%
+                    text-align: center
+                    border: 1px solid #9B312C
+                    padding: 0 5px
+                    background-color: #e5e8f3
+    .digital__popup-btns
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        width: 100%
+        height: auto
+    .passport-reduct-btn
+        width: 155px
+        height: 40px
+        padding: 6px
+        margin: 20px 10px 30px
+        background: #0A4551
+        border-radius: 100px
+        text-align: center
+        font-family: PT Sans
+        font-style: normal
+        font-weight: bold
+        font-size: 16px
+        line-height: 130%
+        color: #FFFFFF
+        transition: box-shadow 0.3sxzz
+        &:hover
+            color: #0A4551
+            background: #ffffff
+            box-shadow: 0px 0px 10px 5px rgb(10 69 81 / 25%), 0px 0px 10px 5px rgb(10 69 81 / 25%)
+            transition: box-shadow 0.3s
+            
+    // Попап удаления документа на странице Мой документы
+    .popup__delete-doc
+        font-family: "PT Sans"
+        font-style: normal
+        h3
+            font-weight: bold
+            font-size: 32px
+            line-height: 40px
+            text-align: left
+            color: #253639
+            margin: 0
+            margin-bottom: 12px
+        .popup__content
+            p
+                margin-bottom: 37px
+// стили для редактирования документа на странице Мои документы
+.digital__progress-bar
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    max-width: 667px
+    height: 32px
+    padding: 0
+    margin-bottom: 32px
+    font-family: 'PT Sans'
+    font-style: normal
+    .progress-bar-sircle
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 24px
+        height: 24px
+        border: 1px solid #8C8E94
+        border-radius: 50%
+        margin: 0 4px
+        font-size: 14px
+        line-height: 20px
+        color: #8C8E94
+    .active-circle
+        color: #3572F2
+        border: 1px solid #3572F2
+        width: 32px
+        height: 32px
+    .ready-circle 
+        background-color: #3572F2
+        color:#fff 
+        border: 1px solid #3572F2
+
+    .progress-bar-border
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        flex-grow: 2
+        width: auto
+        border-bottom: 1px dashed #8C8E94
+    .ready-border
+        border: 1px dashed #3572F2
+
+// Предпросмотр документа
+.digital__preview
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    width: 109px
+    position: absolute
+    top: 32px
+    right: 40px
+    cursor: pointer
+    span
+        font-family: 'PT Sans'
+        font-style: normal
+        font-weight: normal
+        font-size: 17px
+        line-height: 24px
+        text-align: center
+        color: #363638
+        margin-top: 8px
+
+
+
+
+// -------------------------------------------------------------------------

@@ -1,0 +1,585 @@
+
+/* Стили для страницы ЗДРАВЫЕ МЫСЛИ */
+/* style sheets for statspikerom page */
+*
+    box-sizing: border-box
+
+body
+    font-family: "PT Sans", "Helvetica", sans-serif
+
+.statspikerom__main
+    padding: 0
+
+/* КОНТЕНТ ЗДРАВЫЕ МЫСЛИ */
+.statspikerom__content
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    padding: 32px
+    font-family: PT Sans
+    font-style: normal
+    background-color: #fff
+    margin-bottom: 52px
+    .statspikerom__title, .statspikerom__title-h2
+        margin: 0 0 24px
+        padding: 0
+        font-weight: bold
+        font-size: 42px
+        line-height: 48px
+        text-align: left
+        color: #253639
+
+    .statspikerom__title-h2
+        font-size: 32px
+        line-height: 40px
+        margin-bottom: 12px
+
+    .statspikerom__baner
+        width: 100%
+        margin-bottom: 12px
+        img
+            width: 100%
+
+    .statspikerom__desc
+        font-weight: normal
+        font-size: 20px
+        line-height: 25px
+        color: #4C595C
+        margin-bottom: 32px
+        padding-right: 20px
+    
+    // TAGS
+    .tags_beilec 
+        border: 1px solid #E7E7E7
+        box-sizing: border-box
+        border-radius: 4px
+        max-height: 86px
+        padding: 16px
+        overflow-y: auto
+        overflow: hidden
+
+    .statspikerom__text-aria
+        display: block
+        margin: 0 auto
+        min-height: 130px
+        resize: none
+
+    .tags_beilec .ti-input, .ti-new-tag-input-wrapper
+        border: none!important
+        padding: 0 !important
+        width: inherit !important
+        font-size: 15px !important
+
+    .ti-new-tag-input-wrapper input
+        margin: 0 10px 10px 0 !important
+
+    .ti-tags-list 
+        display: flex
+        flex-wrap: wrap
+        -webkit-box-ordinal-group: 2
+        -moz-box-ordinal-group: 2
+        -ms-flex-order: 2 
+        -webkit-order: 2 
+        order: 2
+    
+    // tag
+    .small_circle_tag_spiker
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        flex-wrap: nowrap
+        background: #F5F4F0
+        border-radius: 4px
+        padding: 8px 12px
+        margin: 0 20px 20px 0
+        font-weight: normal
+        font-size: 15px
+        line-height: 20px
+        cursor: pointer
+        color: #253639
+
+    .ti-tags-list.beilec_tags
+        display: flex
+        flex-wrap: wrap
+        justify-content: flex-start
+        margin-top: 12px
+        margin-bottom: 52px
+        padding: 0 16px
+        border: 1px solid #E7E7E7
+        box-sizing: border-box
+        border-radius: 4px
+        position: relative
+
+        // Блок с заголовком аккардеона
+        .tags-desc
+            display: flex
+            flex-direction: row
+            justify-content: flex-start
+            align-items: center  
+            
+            width: 100%
+            
+        .tags-show
+            position: absolute
+            right: 20px
+            top: 30px
+            width: 0
+            height: 0
+            appearance: none
+            -webkit-appearance: none
+
+        label
+            display: block
+            width: 100%
+            height: 64px
+            margin-bottom: 0
+            padding-top: 20px 
+            font-weight: normal
+            font-size: 17px
+            line-height: 24px
+            color: #4C595C
+            cursor: pointer
+            z-index: 1
+
+        .open-tag-icon, .open-tag-icon2
+            position: absolute
+            display: block
+            width: 20px
+            right: 20px
+            top: 30px
+            background-color: #C23D3C
+            border: 1px solid #C23D3C
+            border-radius: 4px
+        
+        .open-tag-icon2
+            transform: rotate(90deg)
+            transition: transform 0.2s
+
+
+        .tags-show:checked ~ .tags-block
+            display: flex
+        .tags-show:checked ~ .open-tag-icon2
+            transform: rotate(0deg)
+            transition: transform 0.2s
+        
+        //блок с тэгами
+        .tags-block
+            display: none
+            flex-wrap: wrap
+            justify-content: flex-start
+            span
+                margin: 0 0 12px
+                margin-top: -12px
+                font-weight: normal
+                font-size: 15px
+                line-height: 20px
+                color: #848D8E
+                width: 100%
+        
+    .ti-tags.tags_beilec
+        display: block
+        
+    .tags_beilec .ti-tags
+        display: flex
+        flex-direction: row
+        justify-content: flex-start
+        
+    .tags_beilec .ti-tag
+        display: flex !important
+        flex-direction: row !important
+        justify-content: space-between !important
+        align-items: center !important
+        flex-wrap: nowrap !important
+        background: #F5F4F0 !important
+        border-radius: 4px !important
+        padding: 8px 12px !important
+        margin: 0 10px 10px 0 !important
+        font-weight: normal !important
+        font-size: 15px !important
+        line-height: 20px !important
+        cursor: pointer
+        color: #253639 !important        
+
+
+
+    /* CHEKBOXES */
+    .statspikerom__check-block 
+        width: 100%
+        display: flex
+        margin-bottom: 52px
+        flex-direction: row
+        justify-content: flex-start
+        flex-wrap: wrap
+        align-items: center
+        min-height: 30px
+        .statspikerom__check-item
+            display: flex
+            align-items: center
+            margin: 0 38px 0 0
+            padding: 0
+            &::last-child
+                margin: 0
+        
+            .statspikerom__custom-checkbox
+                position: absolute
+                z-index: -1
+                opacity: 0
+
+    .statspikerom__custom-checkbox + label 
+        display: inline-flex
+        align-items: center
+        user-select: none
+        cursor: pointer
+        margin-bottom: 0
+        font-weight: normal
+        font-size: 17px
+        line-height: 24px
+        color: #4C595C
+        &:before 
+            content: ''
+            display: inline-block
+            width: 20px
+            height: 20px
+            border: 1px solid #EFECE6
+            background: #FFFFFF
+            border-radius: 4px
+            margin-right: 14px
+            cursor: pointer
+            box-sizing: border-box
+
+    .statspikerom__custom-checkbox:checked+label::before
+        background-image: url("/storage/images/speakers/chekbox-active-red.svg")
+        background-position: center center
+        background-repeat: no-repeat
+        background-size: contain
+        border: none
+
+/* Buttons */
+.statspikerom__btn-big
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    width: 207px
+    height: 48px
+    padding: 12px 64px
+    background: #C23D3C
+    border-radius: 4px
+    font-weight: bold
+    font-size: 17px
+    line-height: 24px
+    color: #FFFFFF
+    &:hover
+        background-color: rgba(194, 61, 60, 0.92)
+    &:active
+        background-color: #AE2726
+    &:focus
+        outline: none
+
+/* FORM "LEAVE CONTACT" */
+.statspikerom__talk-about
+    p 
+        text-align: left
+        font-weight: normal
+        font-size: 17px
+        line-height: 24px
+        color: #4C595C
+
+.statspikerom-contacts
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    flex-wrap: wrap
+    width: 100%
+    margin-bottom: 44px
+    input
+        display: block
+        width: 48%
+        height: 64px
+        margin-bottom: 20px
+        padding: 16px
+        border: 1px solid #E7E7E7
+        box-sizing: border-box
+        border-radius: 4px
+        background: #FFFFFF
+        font-weight: normal
+        font-size: 15px
+        line-height: 20px
+        color: #848D8E
+        &:focus
+            border: 1px solid #E7E7E7
+            box-shadow: none
+
+/* SPIKERS BLOCK */
+.statspikerom__spikers 
+    // width: 100%
+    h2
+        font-weight: bold
+        font-size: 28px
+        line-height: 34px
+        color: #253639
+        margin-bottom: 24px
+
+    .statspikerom__spikers-cards 
+        width: 100%
+        min-height: 350px
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        flex-wrap: wrap
+        .statspikerom__card
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            position: relative
+            width: 285px
+            height: 332px
+            background-color: #fff
+            border-radius: 4px
+            margin-bottom: 20px
+            padding: 16px 16px 20px
+            .statspikerom__info-item
+                display: flex
+                flex-direction: row
+                justify-content: flex-start
+                align-items: flex-start
+                width: 100%
+                min-height: 46px
+                margin-bottom: 24px
+
+            .statspikerom__card-photo
+                display: flex
+                align-items: flex-start
+                width: 42px
+                height: 42px
+                margin-top: 6px
+                img
+                    max-width: 100%
+                    height: auto
+                    border-radius: 50%
+                               
+            .statspikerom__info-name
+                display: flex
+                width: 80%
+                flex-direction: column
+                padding-left: 12px
+
+            h3, h4
+                margin: 0
+                padding: 0
+                color: #253639
+                font-weight: bold
+                text-align: left
+                
+            h3
+                font-size: 17px
+                line-height: 24px
+            h4
+                font-size: 20px
+                line-height: 26px 
+                margin-bottom: 12px
+            span
+                font-size: 15px
+                line-height: 20px
+                color: #848D8E
+            
+            p 
+                font-weight: normal
+                font-size: 17px
+                line-height: 24px
+                color: #4C595C
+
+
+            a
+                font-weight: normal
+                font-size: 15px
+                line-height: 20px
+                color: #C22A2E
+                &:hover
+                    text-decoration: none
+
+
+/* MEDIA */
+@media screen and (max-width: 1200px) and (min-width: 992px)
+    .statspikerom__spikers
+        .statspikerom__spikers-cards
+            .statspikerom__card
+                width: 49%
+@media screen and (max-width: 940px) and (min-width: 641px)
+    .statspikerom__spikers
+        .statspikerom__spikers-cards
+            .statspikerom__card
+                width: 49%
+
+@media screen and (max-width: 991px)
+    .statspikerom__content
+        padding: 24px
+        border-radius: 4px
+        margin-left: 24px
+        margin-right: 24px
+    
+    .statspikerom__spikers
+        margin-left: 24px
+        margin-right: 24px
+
+@media screen and (max-width: 768px) 
+    .statspikerom__content
+
+        .statspikerom__title
+            font-size: 28px
+            line-height: 36px
+            margin-bottom: 12px
+
+        .statspikerom__baner
+            width: 100%
+            margin-bottom: 12px
+
+        .statspikerom__title-h2
+            font-size: 20px
+            line-height: 28px
+        .statspikerom__subcripe
+            font-size: 12px
+            line-height: 20px
+
+        .statspikerom__desc
+            font-size: 17px
+            line-height: 24px
+
+        .statspikerom__check-block 
+            .statspikerom__check-item
+                margin: 0 24px 0 0
+                &:last-child
+                    margin: 0
+
+
+    .statspikerom__spikers
+        h2
+            font-size: 20px
+            line-height: 28px
+
+    .statspikerom__spikers-cards 
+        justify-content: space-between
+        .statspikerom__card
+            width: 352px
+
+
+
+@media screen and (max-width: 703px)
+    .statspikerom__content
+        .statspikerom__check-block
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            margin-bottom: 54px
+            .statspikerom__check-item
+                margin-bottom: 30px
+                margin: 0 24px 30px 0
+                label::before
+                    margin-right: 10px
+
+            .statspikerom__custom-checkbox + label 
+                &:before 
+                    width: 26px
+                    height: 26px
+            .statspikerom__custom-checkbox:checked+label::before
+                background-size: 110%  
+
+@media screen and (max-width: 640px) 
+    .statspikerom__content
+        margin-left: 16px
+        margin-right: 16px
+        // Contact form block
+        .statspikerom-contacts
+            flex-direction: column
+            input
+                width: 100%
+        .statspikerom__btn-big
+            width: 100%
+    // Spikers block
+    .statspikerom__spikers
+        margin: 0 16px 100px 
+        .statspikerom__spikers-cards
+            flex-direction: column
+            align-items: center
+            .statspikerom__card
+                width: 100%
+
+@media screen and (max-width: 500px)
+    .statspikerom__content
+        margin-left: 0
+        margin-right: 0
+        padding: 0 16 25px
+        .small_circle_tag_spiker
+            padding: 8px 12px
+            margin: 0 10px 15px 0
+            font-size: 14px
+
+
+@media screen and (max-width: 375px)
+    .statspikerom__content
+        margin-left: 0
+        margin-right: 0
+        padding: 0 0 25px
+
+        .statspikerom__subcripe, .statspikerom__desc, form
+            padding: 0 16px
+
+        // header block
+        .statspikerom__title
+            margin: 0 0 12px
+            padding: 24px 16px 0
+            font-size: 24px
+            line-height: 32px
+
+        .statspikerom__title-h2
+            font-size: 20px
+            line-height: 28px
+            margin-bottom: 12px
+
+        .statspikerom__baner
+            margin-bottom: 12px
+
+        .statspikerom__subcripe
+            font-size: 10px
+            line-height: 18px
+
+        .statspikerom__desc
+            font-size: 15px
+            line-height: 22px
+            margin-bottom: 28px
+
+        // Tags block
+        .statspikerom__tags-aria
+            .ti-tags-list.beilec_tags label
+                font-size: 15px
+            .vue-tag-font *
+                font-size: 14px
+
+            .ti-tags-list.beilec_tags .tags-placeholder
+                font-size: 14px
+
+            .ti-tags-list.beilec_tags .tags-block
+                span
+                    font-size: 13px    
+
+        // Contact form block
+        button
+            font-size: 15px
+            width: 100%
+
+    // Spikers block
+    .statspikerom__spikers
+        h2
+            font-size: 20px
+            line-height: 28px
+            margin-bottom: 14px
+        
+        .statspikerom__spikers-cards 
+            min-height: 350px
+            flex-direction: row
+            justify-content: center
+            .statspikerom__card
+                width: 100%
+
+                

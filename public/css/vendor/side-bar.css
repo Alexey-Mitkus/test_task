@@ -1,0 +1,310 @@
+/* SIDE BAR MENU*/
+.side_nav {
+    font-family: "PT Sans";
+    font-style: normal;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+    .side_nav li {
+        display: block;
+        width: 100%;
+        height: 44px;
+        position: relative;
+        margin-bottom: 4px;
+        cursor: pointer
+    }
+    .side_nav li a, .side_nav li .unready {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: nowrap;
+        width: 100%;
+        height: 44px;
+        padding: 10px 10px 10px 12px;
+    }
+
+    .side_nav li a .text, .side_nav li .unready .text {
+        text-align: left;
+        font-weight: normal;
+        font-size: 17px;
+        line-height: 24px;
+        color: #363638;
+    }
+
+.side_nav li a,
+.side_nav li .onboarding-show {
+    text-align: left;
+    font-weight: 200;
+    font-size: 17px;
+    cursor: pointer;
+    color: #686a6f;
+}
+
+.side_nav li a {
+    position: relative;
+}
+
+.notifications_count{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #3572F2;
+    font-weight: bold;
+    line-height: 20px;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 4px;
+    padding: 0 5px;
+    margin: 0px 4px 0 20px;
+}
+
+.side_nav li.active .text{
+    font-weight: normal;
+    color: #146B7F;
+}
+
+.side_nav li.active a:hover{
+    color: #686a6f;
+    text-decoration: none;
+}
+.side_nav li.hidden_menu{
+    opacity: 0.5;
+}
+
+.side_nav li.hidden_menu .small{
+    color: #686a6f;
+    font-size: 12px;
+}
+
+.side_nav li a:hover {
+    text-decoration: none;
+    cursor: pointer
+}
+
+.side_nav li:hover {
+    background-color: #fff;
+}
+
+.side_nav li.hidden_menu:hover{
+    background: #FAF9F7;
+}
+
+.side_nav .active {
+    background-color: #fff;
+}
+
+/* icons */
+.profile_icon, .notifications_icon, .news_icon, .participants_icon,
+.thoughts_icon, .personal_projects_icon, .documents_icon, .projects_icon,
+.services_icon, .motivation_icon, .database_icon, .settings_icon,
+.onboarding_icon, .admin_icon, .logout_icon, .updates_icon 
+{
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+}
+
+.profile_icon {
+    background-image: url('/images/side-menu/Account.svg');
+}
+
+.active .profile_icon {
+    background-image: url('/images/side-menu/Account_active.svg');
+}
+
+.notifications_icon {
+    background-image: url('/images/side-menu/Notification.svg');
+}
+
+.active .notifications_icon {
+    background-image: url('/images/side-menu/Notification_active.svg');
+}
+
+.news_icon {
+    background-image: url('/images/side-menu/News.svg');
+}
+
+.active .news_icon {
+    background-image: url('/images/side-menu/News_active.svg');
+}
+
+.participants_icon {
+    background-image: url('/images/side-menu/Participants.svg');
+}
+
+.active .participants_icon {
+    background-image: url('/images/side-menu/Participants_active.svg');
+}
+
+.thoughts_icon {
+    background-image: url('/images/side-menu/Thoughts.svg');
+}
+
+.active .thoughts_icon {
+    background-image: url('/images/side-menu/Thoughts_active.svg');
+}
+
+.personal_projects_icon {
+    background-image: url('/images/side-menu/Personal_projects.svg');
+}
+
+.documents_icon {
+    background-image: url('/images/side-menu/Documents.svg');
+}
+
+.active .documents_icon {
+    background-image: url('/images/side-menu/Documents_active.svg');
+}
+
+.projects_icon {
+    background-image: url('/images/side-menu/Projects.svg');
+}
+
+.active .projects_icon {
+    background-image: url('/images/side-menu/Projects_active.svg');
+}
+
+.services_icon {
+    background-image: url('/images/side-menu/Digital_services.svg');
+}
+
+.active .services_icon {
+    background-image: url('/images/side-menu/Digital_services_active.svg');
+}
+
+.motivation_icon {
+    background-image: url('/images/side-menu/Motivation_innactive.svg');
+}
+
+.database_icon {
+    background-image: url('/images/side-menu/Knowledge_base.svg');
+}
+
+.active .database_icon {
+    background-image: url('/images/side-menu/Knowledge_base_active.svg');
+}
+.settings_icon {
+    background-image: url('/images/side-menu/Settings.svg');
+}
+
+.onboarding_icon {
+    background-image: url('/images/side-menu/Onboarding.svg');
+}
+
+.admin_icon {
+    background-image: url('/images/side-menu/Admin.svg');
+}
+
+.logout_icon {
+    background-image: url('/images/side-menu/Logout.svg');
+}
+
+.files_icon {
+    width: 25px;
+    height: 25px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='22' height='12' viewBox='0 0 22 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.05 12C4.44544 12 2.9066 11.3679 1.772 10.2426C0.637409 9.11742 0 7.5913 0 6C0 4.4087 0.637409 2.88258 1.772 1.75736C2.9066 0.632141 4.44544 0 6.05 0H17.6C18.767 0 19.8861 0.459739 20.7113 1.27808C21.5364 2.09642 22 3.20633 22 4.36364C22 5.52095 21.5364 6.63085 20.7113 7.44919C19.8861 8.26753 18.767 8.72727 17.6 8.72727H8.25C7.52065 8.72727 6.82118 8.43994 6.30546 7.92847C5.78973 7.41701 5.5 6.72332 5.5 6C5.5 5.27668 5.78973 4.58299 6.30546 4.07153C6.82118 3.56006 7.52065 3.27273 8.25 3.27273H16.5V4.90909H8.25C7.95826 4.90909 7.67847 5.02403 7.47218 5.22861C7.26589 5.4332 7.15 5.71067 7.15 6C7.15 6.28933 7.26589 6.5668 7.47218 6.77139C7.67847 6.97597 7.95826 7.09091 8.25 7.09091H17.6C17.9611 7.09091 18.3187 7.02037 18.6524 6.88331C18.986 6.74625 19.2892 6.54536 19.5445 6.29211C19.7999 6.03886 20.0025 5.73821 20.1407 5.40732C20.2789 5.07643 20.35 4.72179 20.35 4.36364C20.35 4.00549 20.2789 3.65084 20.1407 3.31995C20.0025 2.98907 19.7999 2.68841 19.5445 2.43516C19.2892 2.18191 18.986 1.98102 18.6524 1.84396C18.3187 1.70691 17.9611 1.63636 17.6 1.63636H6.05C4.88305 1.63636 3.76389 2.0961 2.93873 2.91444C2.11357 3.73278 1.65 4.84269 1.65 6C1.65 7.15731 2.11357 8.26722 2.93873 9.08556C3.76389 9.9039 4.88305 10.3636 6.05 10.3636H16.5V12H6.05Z' fill='%23686B6F'/%3E%3C/svg%3E");
+}
+
+.databasecloud_icon {
+    width: 25px;
+    height: 25px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='22' height='15' viewBox='0 0 22 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.7375 5.6625C17.1142 2.42812 14.3367 0 11 0C8.35083 0 6.05 1.5375 4.90417 3.7875C2.145 4.0875 0 6.47813 0 9.375C0 12.4781 2.46583 15 5.5 15H17.4167C19.9467 15 22 12.9 22 10.3125C22 7.8375 20.1208 5.83125 17.7375 5.6625ZM17.4167 13.125H5.5C3.47417 13.125 1.83333 11.4469 1.83333 9.375C1.83333 7.30312 3.47417 5.625 5.5 5.625H6.15083C6.75583 3.45938 8.69 1.875 11 1.875C13.7867 1.875 16.0417 4.18125 16.0417 7.03125V7.5H17.4167C18.9383 7.5 20.1667 8.75625 20.1667 10.3125C20.1667 11.8687 18.9383 13.125 17.4167 13.125Z' fill='%23686B6F'/%3E%3C/svg%3E");
+}
+
+.analysis_icon {
+    width: 25px;
+    height: 25px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22 9.77778H12.2222V0C14.8154 0 17.3025 1.03016 19.1362 2.86384C20.9698 4.69753 22 7.18455 22 9.77778ZM19.5556 12.2222C19.5556 15.62 17.82 18.6144 15.1922 20.3744L10.4867 12.2222H19.5556ZM9.77778 22C6.38 22 3.38556 20.2644 1.62556 17.6367L9.55778 13.0533L14.1289 20.9856C12.8333 21.6333 11.3422 22 9.77778 22ZM0 12.2222C0 9.62899 1.03016 7.14198 2.86384 5.30829C4.69753 3.4746 7.18455 2.44444 9.77778 2.44444V11.5133L1.01444 16.5733C0.366667 15.2778 0 13.7867 0 12.2222Z' fill='%23686B6F'/%3E%3C/svg%3E");
+}
+
+.pasport_icon {
+    width: 25px;
+    height: 25px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23686b6f' class='bi bi-journal-medical' viewBox='0 0 16 16'%3e%3cpath fill-rule='evenodd' d='M8 4a.5.5 0 0 1 .5.5v.634l.549-.317a.5.5 0 1 1 .5.866L9 6l.549.317a.5.5 0 1 1-.5.866L8.5 6.866V7.5a.5.5 0 0 1-1 0v-.634l-.549.317a.5.5 0 1 1-.5-.866L7 6l-.549-.317a.5.5 0 0 1 .5-.866l.549.317V4.5A.5.5 0 0 1 8 4zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z'/%3e%3cpath d='M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z'/%3e%3cpath d='M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z'/%3e%3c/svg%3e");
+}
+
+/* Admins menu */
+.updates_icon {
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='22' height='17' viewBox='0 0 22 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.10352e-05 10.0113H3.41006L8.67784 -0.000854539L10.1201 10.926L14.0556 5.93817L18.1256 10.0113H22.0001V12.4504H17.1112L14.2634 9.6089L8.45784 16.9991L7.26006 7.95037L4.88895 12.4504H6.10352e-05V10.0113Z' fill='%23686B6F'/%3E%3C/svg%3E");
+}
+
+/* End admin menu */
+
+.side-menu__tooltip {
+    display: none;
+}
+
+.side_nav li a:hover > .side-menu__tooltip {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 274px;
+    height: 96px;
+    padding: 16px;
+    position: absolute;
+    top: -25px;
+    left: 156px;
+    background: #FFFFFF;
+    border-radius: 4px;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 20px;
+    color: #4C595C;
+    box-shadow: 0px -1px 24px rgba(78, 68, 50, 0.2), 0px 4px 24px rgba(78, 68, 50, 0.2);
+    z-index: 1;
+}
+
+.side_nav li a:hover > .side-menu__tooltip > span {
+    display: block;
+    position: absolute;
+    left: -3%;
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    z-index:-1;
+    transform: rotate(0.37turn)
+}
+
+/* @media (max-width: 1199px){
+    .side_nav li .text{
+        margin-left: 11px;
+        margin-top: 3px;
+    }
+    .side_nav li{
+        font-size: 16px!important;
+        margin-top: 4px;
+        position: relative;
+        font-size: 20px;
+    }
+    .side_nav li a {
+        font-size: 16px;
+        margin-top: 2px;
+    } 
+} */
+  
+/* @media (max-width: 1040px){
+    .side_nav li {
+        font-size: 14px;
+    }
+    .side_nav li span {
+        font-size: 14px;
+    }
+    .menu {
+        margin: 0;
+    }
+    .side_nav li a {
+        font-size: 16px;
+    }
+} */

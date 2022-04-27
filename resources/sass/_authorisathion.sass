@@ -1,0 +1,359 @@
+.register__main
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    background-color: #fff
+    width: 100%
+    min-height: 200px
+    margin-top: 40px
+    padding: 20px
+    font-family: 'PT Sans'
+    font-style: normal
+
+.register-form
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    padding: 0 32px 0 12px
+    max-width: 730px
+    .step
+        font-size: 13px
+        line-height: 20px
+        color: #848D8E
+        margin-top: 12px
+        margin-bottom: 28px
+    h3
+        margin: 0
+        padding: 0
+        font-weight: bold
+        font-size: 20px
+        line-height: 28px
+        color: #253639
+        margin-bottom: 12px
+    h4
+        margin-bottom: 26px
+        font-size: 17px
+        line-height: 24px
+        color: #253639
+    .reg-desc
+        font-weight: normal
+        font-size: 17px
+        line-height: 24px
+        color: #4C595C
+        margin-bottom: 12px
+        margin-top: 96px
+        padding-right: 30px
+
+    .verif-desc
+        font-size: 17px
+        line-height: 24px
+        color: #4C595C
+        margin-bottom: 8px
+        word-break: break-word
+        
+    hr
+        width: 100%
+        max-width: 648px
+        height: 1px
+        background: #F0EEE9
+        margin: 32px 0
+    
+    .verif-resent
+        display: flex
+        flex-direction: row
+        justify-content: flex-start
+        align-items: center
+        font-size: 15px
+        line-height: 22px
+        span
+            color: #4C595C
+            margin-right: 5px
+        button
+            cursor: pointer
+            color: #3572F2
+    
+    .ui-kit__radio > label
+        width: auto
+        margin-bottom: 0
+    // input fields
+    .input-field
+        display: flex
+        justify-content: space-between
+        flex-direction: row
+        flex-wrap: wrap
+        width: 100%
+        .field-block
+            max-width: 334px
+            width: 100% 
+            margin-bottom: 20px
+
+        .input-alert-msg, .input-msg
+            font-size: 15px
+            line-height: 22px
+            color: #F70330
+            margin-bottom: 0
+            padding: 2px 0 0 4px
+        
+        .input-msg
+            color: #848D8E
+
+        .border-red
+            border: 1px solid #F70330 !important
+
+        .ui-kit-input
+            .eye-icon-close, .eye-icon-open
+                display: block
+                position: absolute
+                right: 15px
+                top: 20px
+                width: 24px
+                height: 24px
+                cursor: pointer
+            .eye-icon-close
+                background-image: url('../../images/register/register-close-eye.svg')
+            .eye-icon-open
+                background-image: url('../../images/register/register-open-eye.svg')
+            
+
+            .ui.selection.dropdown
+                height: 64px
+                border: 1px solid #E7E7E7
+                border-radius: 4px
+                padding: 16px 16px 26px
+                font-weight: normal
+                font-size: 15px
+                line-height: 22px
+                color: #4C595C
+                
+                .text
+                    cursor: text
+                    position: relative
+                    left: 1px
+                    z-index: 3
+                    top: 4px
+
+                .dropdown.icon
+                    display: block
+                    position: absolute
+                    width: 15px
+                    height: 7px
+                    top: 25px
+                    right: 20px
+                    padding: 15px
+                    background-image: url('../../images/select-arrow-down.png')
+                    background-position: center center
+                    background-repeat: no-repeat
+                .dropdown.icon:before
+                    content: none
+                    
+            
+            .box-description
+                font-size: 15px
+                line-height: 22px
+                color: #848D8E
+                
+    .ui-kit__check-item
+        margin-top: 34px
+        label.register-check, a
+            font-size: 13px
+            line-height: 20px
+            color: #848D8E
+        a
+            text-decoration: underline
+
+.register-picture
+    width: 468px
+    height: 1178px
+    padding: 56px 32px 
+    background-image: url('../../images/register/register-picture.png')
+    background-repeat: no-repeat
+    background-position-x: center
+    h2
+        margin: 0 0 32px
+        padding: 0
+        font-weight: bold
+        font-size: 20px
+        line-height: 28px
+        color: #FFFFFF
+    ul
+        margin: 0
+        padding: 0
+    li
+        display: flex
+        flex-direction: row
+        align-items: center
+        margin-bottom: 24px
+        span
+            font-weight: bold
+            font-size: 17px
+            line-height: 24px
+            color: #FFFFFF
+    img
+        width: 42px
+        height: 42px
+        margin-right: 12px
+
+.login__form
+    display: flex
+    flex-direction: column
+    max-width: 515px
+    background-color: #fff
+    width: 100%
+    padding: 12px 12px 12px 32px
+    border-radius: 4px
+    p, h3
+        margin: 0
+        padding: 0
+    h3
+        font-weight: 700
+        font-size: 20px
+        line-height: 28px
+        color: #253639
+        margin-bottom: 12px
+        text-align: left
+    p   
+        font-size: 17px
+        line-height: 24px
+        color: #4C595C
+        margin-bottom: 32px
+    
+    .login__remember
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 27px
+        .login__remember-line
+            display: flex
+        .register-check
+            font-size: 15px
+            line-height: 22px
+            color: #848D8E
+        a
+            font-size: 15px
+            line-height: 22px
+            color: #3572F2
+    .kb-btns-line
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+    .to-register
+        display: flex
+        flex-direction: row
+        justify-content: flex-end
+        align-items: center
+        span
+            font-size: 15px
+            line-height: 22px
+            color: #4C595C
+            margin-right: 5px
+        a
+            text-decoration: none
+            font-size: 15px
+            line-height: 22px
+            color: #3572F2
+    .line-header
+        display: none
+
+
+.login__picture
+    width: 100%
+    min-height: 433px      
+    background-image: url('../../images/register/login-picture.png')
+    background-repeat: no-repeat
+    background-position-x: center
+
+
+@media screen and (max-width: 992px)
+    .login__form
+        .line-bottom
+            display: none
+        .line-header
+            display: block
+            margin-bottom: 28px
+
+@media screen and (max-width: 768px)
+    .login__picture, .register-picture
+        display: none
+    
+    .register-form
+        background-color: #fff
+        padding: 24px
+        width: 100%
+        .input-field
+            .field-block
+                width: 100%
+                max-width: 100%   
+        .reg-desc
+            margin-top: 62px
+
+        .confirm-pass
+           margin-top: 20px 
+    
+    .login__form
+        max-width: 100%
+        padding: 24px
+
+@media screen and (max-width: 768px) and (min-width: 576px)
+    
+    .register__main
+        padding: 18px
+        background-image: url('../../images/register/register-bg-body.png')
+        background-size: cover
+
+@media screen and (max-width: 576px)  
+    .register__main
+        margin-top: 28px
+    .login__form
+        padding: 16px 16px 24px
+        .kb-btns-line
+            .ui-btn-red
+                width: 100%
+                margin-right: 0 !important
+
+        p   
+            font-size: 17px
+            line-height: 24px
+            color: #4C595C
+            margin-bottom: 32px
+        .login__remember
+            margin-bottom: 170px
+
+        
+
+@media screen and (max-width: 575px) and (min-width: 425px)
+    .register__main
+        padding: 0
+        .register-form
+            padding: 16px
+
+@media screen and (max-width: 424px)
+    .register__main
+        padding: 0
+        .register-form
+            padding: 16px
+
+@media screen and (max-width: 375px)  
+    .login__form
+        .to-register
+            span
+                font-size: 13px
+                line-height: 20px
+            a
+                font-size: 13px
+                line-height: 20px
+        h3
+            font-weight: 700
+            font-size: 20px
+            line-height: 28px
+            color: #253639
+            margin-bottom: 12px
+            text-align: left
+        p   
+            font-size: 15px
+            line-height: 22px
+            color: #4C595C
+            margin-bottom: 24px
+
+@media screen and (max-width: 320px)  

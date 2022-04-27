@@ -1,0 +1,88 @@
+@font-face {
+    font-family: 'PT Astra Sans';
+    src: url('/fonts/Astra/PTAstraSans-Italic.eot');
+    src: url('/fonts/Astra/PTAstraSans-Italic.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/Astra/PTAstraSans-Italic.woff2') format('woff2'),
+        url('/fonts/Astra/PTAstraSans-Italic.woff') format('woff'),
+        url('/fonts/Astra/PTAstraSans-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'PT Astra Sans';
+    src: url('/fonts/Astra/PTAstraSans-Regular.eot');
+    src: url('/fonts/Astra/PTAstraSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/Astra/PTAstraSans-Regular.woff2') format('woff2'),
+        url('/fonts/Astra/PTAstraSans-Regular.woff') format('woff'),
+        url('/fonts/Astra/PTAstraSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PT Astra Sans';
+    src: url('/fonts/Astra/PTAstraSans-BoldItalic.eot');
+    src: url('/fonts/Astra/PTAstraSans-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/Astra/PTAstraSans-BoldItalic.woff2') format('woff2'),
+        url('/fonts/Astra/PTAstraSans-BoldItalic.woff') format('woff'),
+        url('/fonts/Astra/PTAstraSans-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'PT Astra Serif';
+    src: url('/fonts/Astra/PTAstraSerif-Regular.eot');
+    src: url('/fonts/Astra/PTAstraSerif-Regular.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/Astra/PTAstraSerif-Regular.woff2') format('woff2'),
+        url('/fonts/Astra/PTAstraSerif-Regular.woff') format('woff'),
+        url('/fonts/Astra/PTAstraSerif-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PT Astra Serif';
+    src: url('/fonts/Astra/PTAstraSerif-Bold.eot');
+    src: url('/fonts/Astra/PTAstraSerif-Bold.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/Astra/PTAstraSerif-Bold.woff2') format('woff2'),
+        url('/fonts/Astra/PTAstraSerif-Bold.woff') format('woff'),
+        url('/fonts/Astra/PTAstraSerif-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PT Astra Serif';
+    src: url('/fonts/Astra/PTAstraSerif-Italic.eot');
+    src: url('/fonts/Astra/PTAstraSerif-Italic.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/Astra/PTAstraSerif-Italic.woff2') format('woff2'),
+        url('/fonts/Astra/PTAstraSerif-Italic.woff') format('woff'),
+        url('/fonts/Astra/PTAstraSerif-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'PT Astra Sans';
+    src: url('/fonts/Astra/PTAstraSans-Bold.eot');
+    src: url('/fonts/Astra/PTAstraSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/Astra/PTAstraSans-Bold.woff2') format('woff2'),
+        url('/fonts/Astra/PTAstraSans-Bold.woff') format('woff'),
+        url('/fonts/Astra/PTAstraSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PT Astra Serif';
+    src: url('/fonts/Astra/PTAstraSerif-BoldItalic.eot');
+    src: url('/fonts/Astra/PTAstraSerif-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/Astra/PTAstraSerif-BoldItalic.woff2') format('woff2'),
+        url('/fonts/Astra/PTAstraSerif-BoldItalic.woff') format('woff'),
+        url('/fonts/Astra/PTAstraSerif-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+

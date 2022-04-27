@@ -1,0 +1,173 @@
+.v-select{
+    &.vs--single{
+        >ul{
+            &.vs__dropdown-menu{
+                list-style: none;
+                padding: 8px 8px;
+                margin: 8px 0 0 0;
+                border:1px solid #E7E7E7;
+                @include border-radius(4px);
+                background: #fff;
+                @include box-shadow(none);
+                >li{
+                    &.vs__dropdown-option{
+                        padding: 0;
+                        margin: 2px 0 0 0;
+                        border:0;
+                        @include border-radius(0);
+                        background: #fff;
+                        white-space: normal;
+                        >span{
+                            color:#4C595C;
+                            font-family: $font-sans-default;
+                            font-size:rem(15px);
+                            line-height: 22px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            padding: 11px 8px;
+                            margin: 0;
+                            word-break: break-word;
+                        }
+                        &.vs__dropdown-option--deselect{}
+                        &.vs__dropdown-option--selected{}
+                        &.vs__dropdown-option--highlight{
+                            >span{
+                                background: #FAFAFA;
+                                color:#146B7F;
+                                @include border-radius(4px);
+                            }
+                        }
+                        &.vs__dropdown-option--disabled{}
+                        &:last-child{
+                            margin-top: 0;
+                        }
+                    }
+                    &.vs__loading{
+                        padding: 0;
+                        margin: 2px 0 0 0;
+                        border:0;
+                        @include border-radius(0);
+                        background: #fff;
+                        >span{
+                            color:#146B7F;
+                            font-family: $font-sans-default;
+                            font-size:rem(14px);
+                            line-height: 20px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            padding: 11px 8px;
+                            background: #FAFAFA;
+                            margin: 0;
+                            word-break: break-word;
+                        }
+                    }
+                    &.vs__no-options{
+                        padding: 0;
+                        margin: 2px 0 0 0;
+                        border:0;
+                        @include border-radius(0);
+                        background: #fff;
+                        >span{
+                            color:#4C595C;
+                            font-family: $font-sans-default;
+                            font-size:rem(14px);
+                            line-height: 20px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            padding: 11px 8px;
+                            margin: 0;
+                            word-break: break-word;
+                        }
+                    }
+                }
+            }
+        }
+        .vs__dropdown-toggle{
+            background: #fff;
+            @include border-radius(4px);
+            border:1px solid #E7E7E7;
+            padding: 17px 16px;
+            margin: 0;
+            overflow: hidden;
+            position: relative;
+            .vs__selected-options{
+                padding: 0;
+                margin: 0 0 0 0;
+                min-height: 24px;
+                .vs__selected{
+                    padding: 0;
+                    margin: 0;
+                    @include border-radius(0);
+                    border:0;
+                    color:#4C595C;
+                    font-family: $font-sans-default;
+                    font-size:rem(17px);
+                    line-height: 24px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+                .vs__search{
+                    padding: 0;
+                    margin: 0;
+                    border:0;
+                    width: auto;
+                    height: auto;
+                    color:#989FA0;
+                    font-family: $font-sans-default;
+                    font-size:rem(17px);
+                    line-height: 24px;
+                    position: absolute;
+                    left:0;
+                    top:0;
+                    bottom:0;
+                    min-height: 24px;
+                    max-height: 24px;
+                    @include placeholder {
+                        color:#989FA0;
+                        @include opacity(1);
+                    }
+                }
+            }
+            .vs__actions{
+                padding: 0 16px 0 0;
+                margin: 0;
+                border:0;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                text-align: right;
+                position: absolute;
+                top:0;
+                bottom:0;
+                right: 0;
+                margin: auto;
+                min-width: 85px;
+                background: #fff;
+                .vs__clear{
+                    >svg{}
+                }
+                .vs__open-indicator{
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    width: 24px;
+                    height: 24px;
+                    line-height: 1;
+                    >svg{
+                        fill:#5F6B6D;
+                        width: 16px;
+                        display: block;
+                        margin: 0 auto;
+                    }
+                }
+                .vs__spinner{
+                    display: none;
+                }
+            }
+        }
+    }
+    &.vs--searchable{}
+}

@@ -1,0 +1,752 @@
+// Lk colors
+$lk-blue: #3572F2
+$lk-red: #c22a2e
+
+.lk-main
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    width: 100%
+    min-height: 600px
+    .lk-left-coll, .lk-right-coll
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        align-items: center
+        flex-grow: 1
+        min-height: 400px
+    .lk-left-coll
+        width: 300px
+        margin-right: 16px
+    .lk-right-coll
+        width: 600px
+
+.reduct-icon
+    display: block
+    position: absolute
+    width: 24px
+    height: 24px
+    background-image: url('../../images/icons/reduct-icon.svg')
+    background-repeat: no-repeat
+    top: 16px
+    right: 16px
+    cursor: pointer
+
+// lk photo component
+.lk-photo
+    display: flex
+    flex-direction: column
+    align-items: center
+    position: relative
+    width: 100%
+    padding: 32px 20px 52px
+    background-color: #fff
+    border-radius: 4px
+    margin-bottom: 20px
+    .photo
+        width: 172px
+        height: 172px
+        border-radius: 50%
+        margin-bottom: 12px
+        border-radius:100%
+        overflow: hidden
+    .lk-user__info
+        display: flex
+        flex-direction: column
+        align-items: center
+        flex-wrap: nowrap
+        width: 100%
+        word-break: break-word
+        .title
+            font-family: 'PT Sans'
+            font-style: normal
+            font-weight: 700
+            font-size: 17px
+            line-height: 24px
+            text-align: center
+            color: #253639
+        h3
+            margin: 0 0 4px
+            font-weight: 700
+            font-size: 17px
+            line-height: 24px
+            text-align: center
+            color: #253639
+        span
+            font-weight: 400
+            font-size: 15px
+            line-height: 22px
+            color: #4C595C
+            margin-bottom: 12px
+        .birth-date
+            display: flex
+            flex-direction: row
+            justify-content: space-around
+            img
+                display: block
+                width: 20px
+                height: 20px
+                margin-right: 12px
+            span
+                font-weight: 400
+                font-size: 15px
+                line-height: 20px
+                color: #4C595C
+                margin-bottom: 0
+
+    .load-new-avatar
+        display: flex
+        flex-direction: row
+        align-items: center
+        margin-top: 24px
+        img
+            width: 24px
+            height: 24px
+            margin-right: 12px
+        .load-new-avatar
+            font-size: 15px
+            line-height: 22px
+            color: $lk-blue
+            margin: 0
+            cursor: pointer
+        input
+            display: none
+
+// lk progressbar component   
+.lk-progressbar
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: flex-start
+    width: 100%
+    padding: 24px 20px
+    position: relative
+    background-color: #fff
+    font-family: 'PT Sans'
+    font-style: normal
+    .progress-title
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+        margin-bottom: 16px
+
+        span
+            font-weight: normal
+            font-size: 15px
+            line-height: 22px
+            color: $lk-blue
+            margin-right: 14px
+        .progressbar__percent-top
+            display: none
+
+    .progressbar__block
+        display: flex
+        flex-direction: column
+        width: 100%
+
+        .progressbar__total
+            width: 100%
+            height: 2px
+            background: rgba(53, 114, 242, 0.15)
+            border-radius: 2px
+            margin-bottom: 2px
+            .progressbar__ready
+                display: block
+                height: 2px
+                background-color: $lk-blue
+        
+        .progressbar__percent-bottom
+            display: inline-block
+            font-weight: 400
+            font-size: 13px
+            line-height: 20px
+            color: #989FA0
+            text-align: right
+    // .percent-circle
+
+// lk contact-info, lk component
+.lk-info
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
+    width: 100%
+    background-color: #fff
+    border-radius: 4px
+    padding: 24px 16px
+    margin-bottom: 20px
+    .hr-grey-top, .hr-grey-bottom
+        width: 100%
+        height: 1px
+        background: #F0EEE9
+    .hr-grey-top
+        margin-top: 0
+        margin-bottom: 28px
+    .hr-grey-bottom
+        margin: 28px 0
+
+    .lk-info__header
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        width: 100%
+        height: 44px
+        margin-bottom: 16px
+        .header-title
+            display: flex
+            flex-direction: row
+            align-items: center
+            position: relative
+            flex-grow: 2
+            background: #FAFAFA
+            height: 44px
+            border-radius: 4px
+            padding: 8px 16px
+            h4
+                font-weight: 700
+                font-size: 20px
+                line-height: 28px
+                color: #253639
+                margin: 0
+        //  img
+
+        .lk-block-reduct
+            display: flex
+            flex-direction: row
+            justify-content: center
+            align-items: center
+            width: 44px
+            height: 44px
+            background: #FAFAFA
+            border-radius: 2px
+            cursor: pointer
+            margin-left: 12px
+            img
+                width: 24px
+                height: 24px
+                cursor: pointer
+
+.education-block
+    display: flex
+    flex-direction: column
+    width: 100%
+    margin-bottom: 28px
+    padding: 16px
+    background: #FAFAFA
+    border-radius: 4px
+    .education-block-title
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        width: 100%
+        margin-bottom: 12px
+        .education-block__title
+            font-family: 'PT Sans'
+            font-style: normal
+            font-weight: 400
+            font-size: 17px
+            line-height: 24px
+            display: flex
+            align-items: center
+            color: #848D8E
+        .education-block__icons
+            display: flex
+            flex-direction: row
+            .education-block__reduct-icon, .education-block__trash-icon
+                width: 28px
+                height: 28px
+                background: #FFFFFF
+                border-radius: 2px
+                cursor: pointer
+            .education-block__trash-icon
+                margin-left: 12px
+    h5
+        margin: 0 0 8px
+        font-family: 'PT Sans'
+        font-style: normal
+        font-weight: bold
+        font-size: 15px
+        line-height: 22px
+        color: #253639
+    p
+        margin: 0
+        font-family: 'PT Sans'
+        font-style: normal
+        font-weight: 400
+        font-size: 15px
+        line-height: 22px
+        color: #253639
+.education-block:last-child
+    margin-bottom: 0
+
+.reduct-education_form
+    width: 100%
+
+.lk-reduct-block
+    display: flex
+    flex-direction: row
+    align-items: flex-start
+    width: 100%
+    // reduct-form
+    .reduct-form
+        display: flex
+        flex-direction: column
+        align-items: center
+        width: 100%
+        .flex-row
+            display: flex
+            flex-direction: row
+        .reduct-form__field
+            display: flex
+            position: relative
+            flex-direction: column
+            justify-content: space-between
+            align-items: center
+            .ui-kit-input
+                .ui.selection.dropdown
+                    height: 64px
+                    border: 1px solid #E7E7E7
+                    border-radius: 4px
+                    padding: 16px 16px 26px
+                    font-weight: normal
+                    font-size: 15px
+                    line-height: 22px
+                    color: #4C595C
+                    
+                    .text
+                        cursor: text
+                        position: relative
+                        left: 1px
+                        z-index: 3
+                        top: 4px
+
+                    .dropdown.icon
+                        display: block
+                        position: absolute
+                        width: 15px
+                        height: 7px
+                        top: 25px
+                        right: 20px
+                        padding: 15px
+                        background-image: url('../../images/select-arrow-down.png')
+                        background-position: center center
+                        background-repeat: no-repeat
+                    .dropdown.icon:before
+                        content: none
+
+            .box-description
+                font-size: 15px
+                line-height: 22px
+                color: #848D8E
+                
+        .reduct-form__field, .reduct-form__checkbox
+            width: 100%
+            padding-bottom:  20px
+
+            .reduct-form__desc
+                display: block
+                font-size: 15px
+                line-height: 22px
+                color: #848D8E
+                width: 100%
+                margin-left: 4px
+            .arrow-icon 
+                display: block
+                position: absolute
+                right: 15px
+                top: 20px
+                background-image: url('../../images/icons/arrow-bottom-icon.svg')
+                width: 24px
+                height: 24px
+
+            .select-list
+                display: none
+                ul
+                    display: flex
+                    flex-direction: column
+                    margin: 0
+                    li
+                        display: flex
+                        flex-direction: row
+                        align-items: center
+                        padding: 11px 8px
+                        cursor: pointer
+                        font-weight: 400
+                        font-size: 15px
+                        line-height: 22px
+                        color:#4C595C
+                        &:hover
+                            background: #FAFAFA
+                            border-radius: 4px
+                            color: #146B7F
+
+            .iu-input_input:focus ~ .select-list, .select-list:hover
+                display: block
+                width: 100%
+                position: absolute
+                top: 72px
+                z-index: 1
+                background-color: #fff
+                padding: 4px 8px 9px
+                border: 1px solid #E7E7E7
+                box-sizing: border-box
+                border-radius: 4px
+            .iu-input_input:focus ~ .arrow-icon   
+                background-image: url('../../images/icons/arrow-top-icon.svg')
+            
+            .calendar-icon
+                display: block
+                position: absolute
+                right: 15px
+                top: 20px
+                width: 24px
+                height: 24px
+                background-image: url('../../images/icons/calendar-icon.svg')
+
+        .reduct-form__lock
+            display: flex
+            flex-direction: row
+            justify-content: center
+            align-items: center
+            width: 64px
+            height: 64px
+            margin-left: 12px
+            bborder-radius: 4px
+            border: 1px solid #E7E7E7
+            cursor: pointer
+            .eye-icon-close
+                width: 24px
+                height: 24px
+                background-image: url('../../images/register/register-close-eye.svg')
+            .eye-icon-open
+                width: 24px
+                height: 24px
+                background-image: url('../../images/register/register-open-eye.svg')
+
+        .reduct-form__checkbox
+            margin-left: 4px
+            .ui-kit__radio 
+                .ui-kit__custom-radio + label::before
+                    width: 17px
+                    height: 17px
+                label 
+                    width: auto
+                    font-size: 15px
+                    line-height: 22px
+                    color: #253639
+                    margin-bottom: 0
+                
+        
+        // TAGS BLOCK
+        .reduct-form__tags
+            width: 100%
+            .form__tags-title
+                margin-top: 12px
+                padding-bottom: 12px
+                h5
+                    margin-bottom: 12px 
+                    font-weight: 400
+                    font-size: 17px
+                    line-height: 24px
+                    color: #848D8E
+                p   
+                    font-weight: 400
+                    font-size: 15px
+                    line-height: 22px
+                    color: #4C595C
+
+            .form__tags-selected
+                display: flex
+                flex-direction: row
+                justify-content: flex-start
+                flex-wrap: wrap
+                padding: 16px
+                min-height: 64px
+                border: 1px solid #E7E7E7
+                box-sizing: border-box
+                border-radius: 4px
+                margin-bottom: 24px
+
+            
+            .form__tags-select
+                display: flex
+                flex-direction: row
+                justify-content: flex-start
+                flex-wrap: wrap
+                padding: 0 4px 32px
+            
+            .tag
+                display: flex
+                flex-direction: row
+                justify-content: flex-start
+                align-items: center
+                padding: 8px
+                margin-right: 12px
+                margin-bottom: 12px
+                background: #F5F4F0
+                border-radius: 4px
+                cursor: pointer
+                span
+                    font-weight: 400
+                    font-size: 13px
+                    line-height: 20px
+                    color: #253639
+                    margin-right: 16px
+
+.reduct-form__buttons
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    width: 100%
+    padding-left: 4px
+    button
+        font-size: 15px
+        line-height: 22px
+        color: #253639
+        margin-right: 24px
+    .add-button
+        width: 100%
+        height: 46px
+        margin: 0
+        text-align: center
+        border: 1px solid #363638
+        box-sizing: border-box
+        border-radius: 4px
+        font-weight: bold
+        font-size: 15px
+        line-height: 22px
+        color: #253639
+
+    .color-red
+        color: $lk-red
+
+// lk info companent
+.lk-info-block
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    flex-wrap: wrap
+    align-items: center
+    margin-bottom: 24px
+    font-family: 'PT Sans'
+    font-style: normal
+    padding: 0 16px
+    .contact-title
+        font-size: 17px
+        line-height: 24px
+        color: #848D8E
+        margin-right: 12px
+    .cantact-value
+        font-size: 15px
+        line-height: 22px
+        color: #253639
+    .cantact-link
+        font-weight: 400
+        font-size: 15px
+        line-height: 22px
+        color: #3572F2
+        cursor: pointer
+        text-decoration: none
+
+// lk job component
+.lk-job-block
+    margin: 0 0 24px
+    padding: 0 16px
+    font-family: 'PT Sans'
+    font-style: normal
+    h4
+        margin: 0 0 8px
+        font-weight: 700
+        font-size: 15px
+        line-height: 22px
+        color: #4C595C
+    p
+        margin: 0
+        font-weight: 400
+        font-size: 15px
+        line-height: 22px
+        color: #4C595C
+
+// lk product management component
+.lk-product-block
+    margin: 0 0 24px
+    padding: 0 16px
+    font-family: 'PT Sans'
+    font-style: normal
+    .title
+        font-weight: 400
+        font-size: 17px
+        line-height: 24px
+        color: #848D8E
+        margin: 0 0 12px
+    .desc
+        font-weight: 400
+        font-size: 15px
+        line-height: 22px
+        color: #253639
+        margin-bottom: 0
+
+// lk education component
+.lk-education-block
+    margin: 0 0 24px
+    padding: 0 16px
+    font-family: 'PT Sans'
+    font-style: normal
+    .title
+        font-weight: 400
+        font-size: 17px
+        line-height: 24px
+        color: #848D8E
+        margin: 0 0 12px
+    .institution
+        font-weight: 700
+        font-size: 15px
+        line-height: 22px
+        color: #253639
+        margin: 0 0 8px
+    .profession
+        font-weight: 400
+        font-size: 15px
+        line-height: 22px
+        color: #253639
+        margin: 0
+
+.lk-education-block:last-child,
+.lk-product-block:last-child,
+.lk-info-block:last-child
+    margin-bottom: 0
+
+// components
+.desc-list
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    flex-wrap: wrap
+    font-weight: 400
+    font-size: 15px
+    line-height: 22px
+    color: #253639
+    margin-bottom: 0
+    li
+        margin: 0 15px 12px 0
+        list-style-type: disc
+        list-style-position: inside
+        // &:first-child
+        //     list-style: none
+
+@media screen and (max-width: 768px)
+    .lk-main
+        flex-direction: column
+        .lk-left-coll
+            flex-direction: column-reverse
+            justify-content: flex-end
+            min-height: 200px
+            width: 100%
+            padding: 0 18px
+            // progressbar
+            .lk-progressbar
+                margin-bottom: 20px
+                .progressbar__block
+                    flex-direction: column-reverse
+                    .progressbar__percent-bottom
+                        display: none
+            .progress-title
+                display: flex
+                flex-direction: row
+                align-items: center
+                justify-content: space-between
+                width: 100%
+                margin-bottom: 4px
+                .progressbar__percent-top
+                    display: block
+                    margin-bottom: -10px
+                    font-weight: 400
+                    font-size: 13px
+                    line-height: 20px
+                    text-align: right
+                    color: #989FA0
+
+            // avatar and total info
+            .lk-photo
+                flex-direction: row
+                flex-wrap: nowrap
+                align-items: center
+                padding: 24px
+                height: auto
+                .photo
+                    display: flex
+                    flex-direction: row
+                    align-items: center
+                    width: 30%
+                    height: auto
+                    margin: 0
+                .lk-user__info
+                    align-items: flex-start
+                    padding-left: 12px
+                    padding-right: 18px
+                    width: 70%
+                    h3
+                        text-align: left
+                        font-size: 15px
+                        line-height: 22px
+                // load avatar
+                .load-new-avatar
+                    margin-top: 0
+                    padding-left: 12px 
+        // right coll 
+        .lk-right-coll
+            padding: 0 18px
+            width: 100%
+            .lk-info
+                .lk-info-block
+                    .contact-title
+                        font-size: 15px
+                        line-height: 22px
+                .lk-product-block
+                    margin: 0
+                    .title
+                        font-size: 15px
+                        line-height: 22px
+                .lk-reduct-block 
+                    .reduct-form 
+                        .reduct-form__tags 
+                            .form__tags-title 
+                                h5
+                                    font-size: 15px
+                                    line-height: 22px
+@media screen and (max-width: 576px)
+    .lk-main
+        flex-direction: column
+        .lk-left-coll, .lk-right-coll
+            .lk-info 
+                .header-title 
+                    height: 40px
+                    h4
+                        font-size: 17px
+                        line-height: 24px
+                .lk-block-reduct
+                    width: 40px
+                    height: 40px
+
+        .lk-left-coll
+            .lk-photo, .lk-progressbar
+                width: 100%
+        
+
+@media screen and (max-width: 375px)
+    .lk-main
+        flex-direction: column
+        .lk-left-coll, .lk-right-coll
+            padding: 0
+        .lk-left-coll
+            .lk-photo
+                padding: 16px 30px 16px 16px
+                .reduct-icon
+                    top: 10px
+                    right: 10px
+                .lk-user__info
+                    h3
+                        font-size: 15px
+                        line-height: 22px

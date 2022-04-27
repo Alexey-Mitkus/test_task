@@ -1,0 +1,424 @@
+.motivation__wrapper
+    width: 100%
+    background-color: #fff
+
+// motivation header
+.motivation__header
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    margin: 0
+    padding: 100px 50px 10px
+    width: 100%
+    height: 410px
+    background-image: url('../../images/motivation/motivation_header-bg.png')
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: top left
+    &-title
+        width: 595px
+        height: 116px
+        background: linear-gradient(180deg, #CED6F2 0%, #CCEFFB 0.01%, #FBCCE4 100%)
+        border-radius: 10px
+        padding: 5px 20px
+        margin-bottom: 40px
+        h1
+            font-family: PT Sans
+            font-style: normal
+            font-weight: bold
+            text-align: left
+            font-size: 60px
+            line-height: 100%
+            color: #353432
+            margin: 0
+            padding: 0
+        h3
+            font-family: PT Sans
+            font-style: normal
+            font-weight: normal
+            text-align: left
+            font-size: 34px
+            line-height: 100%
+            color: #353432
+            margin: 0
+            padding: 0
+    &-border
+        display: block
+        width: 40px
+        height: 4px
+        background: #CED6F2
+        border-radius: 5px
+        margin: 0 0 12px 22px
+    &-desc
+        width: 580px
+        margin-left: 20px
+        p
+            font-family: PT Sans
+            font-style: normal
+            font-weight: normal
+            font-size: 19px
+            line-height: 26px
+            color: #FFFFFF
+
+.motivation__header-footer
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+    width: 100%
+    height: 130px
+    background: #0D4552
+    .motivation__header-intro
+        width: 600px
+        height: 36px
+        margin-top: 64px
+        font-family: PT Sans
+        font-style: normal
+        font-weight: normal
+        text-align: center
+        font-size: 30px
+        line-height: 100%
+        color: #FFFFFF
+
+.motivation__header-switcher
+    width: 640px
+    position: absolute
+    top: -30px
+    height: 60px
+    background: #FFFFFF
+    border-radius: 100px
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    cursor: pointer
+    &-red, &-white
+        width: 50%
+        height: 60px
+        font-family: PT Sans
+        font-style: normal
+        font-weight: bold
+        font-size: 36px
+        line-height: 130%
+        padding: 6px
+        text-align: center
+    &-red
+        background: #9A1B1F
+        border-radius: 100px
+        color: #FFFFFF
+.motivation__header-categories
+    width: 640px
+    height: 100%
+    color: white
+    margin-top: 60px
+    display: flex
+    flex-direction: row
+    justify-content: center
+    ul
+        display: flex
+        flex-direction: row
+        justify-content: space-around
+        margin: 0
+        padding: 0
+        width: 100%
+        li
+            font-weight: bold
+            font-size: 36px
+            line-height: 100%
+            color: #FFFFFF
+
+    
+
+//Content    
+.motivation__content
+    width: 100%
+    height: auto
+    display: flex
+    flex-direction: column
+    justify-content: center
+    padding: 30px 30px 50px
+    background-color: #E5E5E5
+    background: linear-gradient(#E5E5E5 70%, #E6E1DE)
+
+// Card
+.motivation__card
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    width: 100%
+    padding: 35px
+    margin-bottom: 20px
+    background: #FFFFFF
+    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 30.1471px 24.1177px rgba(0, 0, 0, 0.0456112), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 4.5288px 3.62304px rgba(0, 0, 0, 0.0243888)
+    border-radius: 15px
+    &-title
+        width: 100%
+        border-bottom: 1px solid #BDBDBD
+        margin-bottom: 20px
+        h2
+            font-family: PT Sans
+            font-style: normal
+            font-weight: bold
+            font-size: 36px
+            line-height: 100%
+            color: #353432
+            margin-bottom: 15px 
+    &-list
+        width: 100%
+        padding: 20px 20px 5px 50px 
+        background: #CED6F2
+        border-radius: 15px
+        margin-bottom: 30px
+        li  
+            list-style-type: disc
+            font-family: PT Sans
+            font-style: normal
+            font-weight: bold
+            font-size: 22px
+            line-height: 28px
+            color: #353432
+    &-icons
+        display: flex
+        flex-direction: row
+        justify-content: center
+        width: 624px
+        height: 70px
+        padding: 0 30px
+        &-line-1, &-line-2
+            height: 100%
+            width: 100%
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+        &-circle
+            display: flex
+            justify-content: center
+            align-items: center 
+            width: 70px
+            height: 70px
+            margin: 0 17px
+            border-radius: 100%
+            margin-bottom: 20px
+            img
+                display: block
+    .tiffany-color
+        background-color: #CCEFFB
+    .purple-color
+        background-color: #FBCCE4
+    &-bages
+        display: flex
+        flex-direction: row
+        justify-content: space-around
+        flex-wrap: wrap
+        align-items: center
+        width: 100%
+        img
+            display: block
+            width: 250px
+            height: auto
+
+    &-achivments
+        display: flex
+        flex-direction: row
+        justify-content: space-around
+        flex-wrap: wrap
+        width: 100%
+    &-achiv-card
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        align-items: center
+        width: 210px
+        .motivation__card-achiv-blocked
+            width: 145px
+            height: 145px
+        h5, p
+            text-align: center
+            margin: 0
+            padding: 0
+            font-weight: 600
+            line-height: 140%
+            color: #0D4552
+        h5 
+            font-size: 18px
+        p
+            font-size: 16px
+    &-arrow-bottom
+        display: flex
+        justify-content: center
+        margin-top: 30px
+        width: 100%
+        height: 19px
+    &-havecards
+        width: 100%
+        display: flex
+        flex-direction: row
+        justify-content: space-around
+        flex-wrap: wrap
+        padding: 20px
+        .havecards-1
+            width: 280px
+            height: 425px
+            border-radius: 15px
+            box-shadow: 1px 2px 9px 2px rgba(71, 71, 71, 0.4)
+        .havecards-2
+            width: 283px
+            height: 428px
+
+    // card 3
+    &-instruction
+        display: flex
+        flex-direction: column 
+        width: 100%
+        &-item
+            width: 100%
+            border-radius: 100px
+            background-color: #CED6F2
+            padding: 15px 35px
+            margin-bottom: 15px
+            text-align: left
+            font-family: PT Sans
+            font-style: normal
+            font-weight: bold
+            font-size: 22px
+            line-height: 28px
+            color: #353432
+            span
+                color: #9A1B1F
+                line-height: 1.15
+                cursor: pointer
+    &-cards
+        display: flex
+        flex-direction: row
+        justify-content: space-around
+        align-self: center
+        flex-wrap: wrap
+        width: 100%
+        margin: 20px 0 0
+        &-item
+            width: 245px
+            height: 270px
+            margin-bottom: 20px
+            margin-top: 20px
+            h4
+                margin: 0
+                text-align: center
+                font-size: 24px
+                line-height: 140%
+                font-weight: bold
+            p
+                font-weight: normal
+                text-align: center
+                font-size: 14px
+                line-height: 140% 
+                margin-bottom: 15px
+            &-first
+                display: block
+                width: 200px
+                height: auto
+                margin: 0 auto
+                margin-top: 60px
+            &-midle
+                display: block
+                width: 245px
+                height: auto
+                margin: 0 auto
+            &-last
+                display: block
+                width: 170px
+                height: auto
+                margin: 0 auto
+                margin-top: 35px
+                
+
+// card 3
+.motivation__card-type-of-reward
+    display: flex
+    flex-direction: column
+    justify-content: center
+    padding: 0 10px
+    border-bottom: 1px solid #BDBDBD
+    margin-bottom: 38px
+    &-item
+        width: 100%
+        height: 154px
+        display: flex
+        flex-direction: row
+        align-items: center
+        margin-bottom: 30px
+        .left-side
+            display: flex
+            flex-direction: column
+            align-items: center
+            width: 110px
+            font-family: PT Sans
+            font-weight: bold
+            color: #353432
+            h4  
+                font-weight: bold
+                font-size: 24px
+                line-height: 31px
+                margin-bottom: 0px
+                color: #9A1B1F
+            p 
+                font-size: 18px
+                line-height: 23px
+        .right-side
+            display: flex
+            flex-direction: row
+            justify-content: center
+            align-items: center
+            width: 580px
+            min-height: 80px
+            margin-left: 45px
+            padding: 15px 16px
+            background-color: #CED6F2
+            border-radius: 15px
+            color: #353432
+            ul
+                margin: 0
+                padding: 0
+            li
+                list-style-type: disc
+                font-family: PT Sans
+                font-style: normal
+                font-weight: bold
+                font-size: 18px
+                line-height: 23px
+            span
+                margin: 0
+                padding: 0
+                font-weight: bold
+                font-size: 24px
+                line-height: 31px
+    &-btn
+        display: flex
+        flex-direction: row
+        justify-content: center
+        align-items: center
+        width: 100%
+        margin-bottom: 15px
+        button
+            width: 400px
+            height: 50px
+            background: #9A1B1F
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+            border-radius: 40px
+            font-style: normal
+            font-weight: bold
+            font-size: 24px
+            line-height: 31px
+            text-align: center
+            color: #FFFFFF
+            
+
+
+
+
+
+
+
+                
+

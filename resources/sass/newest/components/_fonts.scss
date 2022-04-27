@@ -1,0 +1,21 @@
+// @mixin font-face($name, $src, $filesrc, $weight: 'normal', $style: 'normal', $display: 'swap', $displayHidden: 0){
+// 	@font-face {
+// 		font-family: quote($name);
+// 		src: url($src + $filesrc + '.eot');
+// 		src: url($src + $filesrc + '.woff2') format('woff2'),
+// 			url($src + $filesrc + '.woff') format('woff'),
+// 			url($src + $filesrc + '.ttf') format('truetype'),
+// 			url($src + $filesrc + '.svg##{$name}') format('svg'),
+// 			url($src + $filesrc + '.eot?#iefix') format('embedded-opentype');
+// 		font-weight: unquote($weight);
+// 		font-style: unquote($style);
+// 		@if $displayHidden == 0 {
+// 			font-display: unquote($display);
+// 		}
+// 	}
+// }
+
+// @include font-face('pt-astra-sans-regular', '~assets/fonts/', 'pt-astra-sans-regular', 'normal', 'normal');
+// @include font-face('pt-astra-sans-regular-italic', '~assets/fonts/', 'pt-astra-sans-regular-italic', 'normal', 'normal');
+// @include font-face('pt-astra-sans-bold', '~assets/fonts/', 'pt-astra-sans-bold', 'normal', 'normal');
+// @include font-face('pt-astra-sans-bold-italic', '~assets/fonts/', 'pt-astra-sans-bold-italic', 'normal', 'normal');

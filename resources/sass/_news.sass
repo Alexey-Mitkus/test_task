@@ -1,0 +1,300 @@
+// SEARCH NEWS AND PROJECTS
+.search__form
+    display: flex
+    justify-content: flex-start
+    flex-direction: row
+    border-bottom: 1px solid #fff
+    font-family: PT Sans
+    .search-block
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        .search-addon
+            display: flex
+            flex-direction: row
+            flex-wrap: nowrap
+            align-items: center
+            justify-content: flex-start
+            padding-bottom: 12px
+            .search-title
+                font-size: 12px
+                color: #fff
+                margin-right: 7px
+        .search
+            display: block
+            font-family: PT Sans
+            font-style: normal
+            color: #fff
+            margin-left: 8px
+            margin-bottom: 9px
+            padding-bottom: 2px
+            font-size: 14px
+            &::placeholder
+                color: #fff
+            &:focus::placeholder
+                color: transparent
+            &:active::placeholder
+                color: transparent
+
+// NEWS
+.news__background
+    background-color: #F4F6FB
+.news__header-block
+    width: 100%
+    min-height: 80px
+    background-color: #0A4551
+    padding: 10px 22px
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
+    color: #fff
+
+    h1
+        font-family: PT Sans
+        font-style: normal
+        font-weight: bold
+        margin-bottom: 0
+        font-size: 24px
+        margin-right: 22px
+
+// NEWS TABS
+.tabs
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    flex-wrap: wrap
+    margin-bottom: 16px
+    .tab 
+        display: flex
+        flex-direction: column
+        align-items: center
+        font-family: PT Sans
+        font-style: normal
+        font-weight: bold
+        font-size: 14px
+        line-height: 22px
+        color: rgba(53, 52, 50, 0.4)
+        padding-right: 7px
+        cursor: pointer
+        &__title
+            margin-top: 5px
+        &__border
+            display: block
+            width: 40px
+            height: 2px
+            border-bottom: 2px solid #0A4551
+            border-radius: 12px
+            transition: margin-left 4s, color 1s
+            
+    .tab::last-child
+        padding-right: none
+
+    .labelActive
+        color: #0A4551
+        
+// NEWS BLOCK
+.news__item
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    flex-wrap: nowrap
+    min-height: 232px
+    margin-bottom: 15px
+    border-radius: 15px
+    padding: 20px 20px
+    box-shadow: 0px 9px 13px -3px #0000006e
+    &-image
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        max-width: 312px
+        min-width: 288px
+        height: auto
+        img
+            width: 100%
+            height: auto
+            border-radius: 10px
+
+    .news__item-article
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-content: space-between
+        padding-left: 15px
+        width: auto
+        .news__item-label
+            font-weight: bold
+            font-size: 16px
+            text-align: left
+            color: #9B312C
+        .news__item-date
+            padding-top: 3px    
+            font-size: 12px
+            font-weight: bold
+            text-align: right
+            color: rgba(10, 69, 81, 0.6)
+        .news__item-title
+            font-weight: bold
+            font-size: 18px
+            color: #0A4551
+        .news__item-description
+            font-style: normal
+            font-weight: normal
+            font-size: 14px
+            color: #353432
+            margin-top: 10px
+
+@media (max-width: 768px)
+    .tabs
+        display: flex
+        flex-direction: row
+        justify-content: flex-start
+        flex-wrap: wrap
+        .tab
+            margin-right: 10px
+               
+    // NEWS
+    .news__item
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        align-items: center
+        flex-wrap: nowrap
+        padding: 20px
+        border-radius: 15px
+        &-image
+            display: flex
+            flex-direction: row
+            justify-content: center
+            align-items: center
+            max-width: 100%
+            min-width: auto
+            margin-bottom: 20px
+            img
+                width: 100%
+                height: auto
+                border-radius: 10px
+        .news__item-article
+            padding-left: 0
+@media (max-width: 502px)
+    .news__header-block 
+        flex-direction: column
+        justify-content: center
+        align-items: flex-start
+        flex-wrap: nowrap
+        h1
+            text-align: center
+            font-size: 23px
+            margin-right: 0
+            margin-bottom: 10px
+
+@media (max-width: 375px)
+    .news__header-block 
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        flex-wrap: nowrap
+        .tabs
+            margin-bottom: 0
+        h1
+            text-align: center
+            font-size: 23px
+            margin-right: 0
+            margin-bottom: 10px
+    .news__item
+        padding: 10px
+        &-image
+            max-width: 100%
+            min-width: auto
+            height: auto
+            img
+                width: 100%
+                height: auto
+                border-radius: 10px
+
+// NEWS POST (Страница поста новости и поста проекта)
+.news-post__content
+    padding: 20px 15px
+    .news-post__title
+        margin: 0
+        margin-bottom: 20px
+        text-align: left
+        font-family: PT Sans
+        font-style: normal
+        font-weight: bold
+        // font-size: 28px
+        color: #353432
+    .news-post__article
+        font-weight: bold
+        font-size: 20px
+        text-align: left
+        color: #9B312C
+    .news-post__date   
+        font-size: 18px
+        font-weight: bold
+        text-align: right
+        color: rgba(10, 69, 81, 0.6)
+    h1
+        font-size: 37px
+    h2
+        font-size: 32px
+    h3
+        font-size: 26px
+    h4
+        font-size: 24px 
+    h5
+        font-size: 19px
+    h2, h3, h4, h5 
+        margin-bottom: 12px
+
+@media (max-width: 768px)
+    .news-post__content
+        h1
+            font-size: 32px
+        h2
+            font-size: 28px
+        h3
+            font-size: 26px
+        h4
+            font-size: 24px 
+        h5
+            font-size: 19px
+        h2, h3, h4, h5 
+            margin-bottom: 12px
+
+@media (max-width: 425px)
+    .news-post__content
+        padding: 15px 10px
+        .news-post__title
+            margin-bottom: 10px
+        .news-post__article
+            font-size: 15px
+        .news-post__date   
+            font-size: 14px
+        h1
+            font-size: 26px
+        h2
+            font-size: 24px
+        h3
+            font-size: 22px
+        h4
+            font-size: 20px 
+        h5
+            font-size: 18px
+        h2, h3, h4, h5 
+            margin-bottom: 12px
+
+// PROJECTS (Стили которые не подходят)
+.tabs__projects
+    justify-content: flex-start
+
+.labelArticle
+    color: #9A1B1F
+
+.dataArticle 
+    font-weight: 600
+    font-size: 13px

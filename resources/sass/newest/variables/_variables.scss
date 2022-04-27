@@ -1,0 +1,527 @@
+// @use "sass:math";
+
+$rem-basefont: 16px !default;
+$rem-fallback: false !default;
+$rem-px-only: false !default;
+
+@mixin fas{
+	font-family: 'Font Awesome 5 Pro';
+	font-weight: 900;
+}
+@mixin far{
+	font-family: 'Font Awesome 5 Pro';
+	font-weight: 400;
+}
+@mixin fal{
+	font-family: 'Font Awesome 5 Pro';
+	font-weight: 300;
+}
+@mixin fab{
+	font-family: 'Font Awesome 5 Brands';
+	font-weight: normal;
+}
+@mixin fad{
+	font-family: 'Font Awesome 5 Duotone';
+	font-weight: 900;
+}
+@mixin fa-icon($type: fa){
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	display: inline-block;
+	font-style: normal;
+	font-variant: normal;
+	line-height: 1;
+	vertical-align: middle;
+    @if $type == fa {
+		@include fas;
+    } @else if $type == fas {
+		@include fas;
+    } @else if $type == far {
+		@include far;
+    } @else if $type == fal {
+		@include fal;
+    } @else if $type == fab {
+    	@include fab;
+    } @else if $type == fad {
+    	@include fad;
+    } @else {
+    	font-weight: normal;
+    }
+}
+@mixin css3-prefix($property, $value) {
+	-webkit-#{$property}: #{$value};
+	-khtml-#{$property}: #{$value};
+	-moz-#{$property}: #{$value};
+	-ms-#{$property}: #{$value};
+	-o-#{$property}: #{$value};
+	#{$property}: #{$value};
+}
+@mixin font-face($name, $src, $filesrc, $weight: 'normal', $style: 'normal', $display: 'swap', $displayHidden: 0){
+	@font-face {
+		font-family: quote($name);
+		src: url($src + $filesrc + '.eot');
+		src: url($src + $filesrc + '.woff2') format('woff2'),
+			url($src + $filesrc + '.woff') format('woff'),
+			url($src + $filesrc + '.ttf') format('truetype'),
+			url($src + $filesrc + '.svg##{$name}') format('svg'),
+			url($src + $filesrc + '.eot?#iefix') format('embedded-opentype');
+		font-weight: unquote($weight);
+		font-style: unquote($style);
+		@if $displayHidden == 0 {
+			font-display: unquote($display);
+		}
+	}
+}
+@function text-stroke($size: 2, $color: #fff, $correction: 0){
+	$radius: $size - $correction;
+	$stroke: ();
+	@for $i from -$size through $size{
+		@for $k from -$size through $size{
+			$x: $k;
+			$y: $i;
+			@if $k > 0 {
+				$x: $k - 0.5;
+			} @else if $k < 0 {
+				$x: $k + 0.5;
+			}
+			@if $i > 0 {
+				$y: $i - 0.5;
+			} @else if $i < 0 {
+				$y: $i + 0.5;
+			}
+			@if ($x*$x + $y*$y <= $radius*$radius){
+				$stroke: append($stroke, $i*1px $k*1px 0 $color, comma);
+			}
+		}
+	}
+	@return $stroke;
+}
+@mixin text-stroke($size: 2, $color: #fff, $correction: 0){
+	text-shadow: text-stroke($size, $color, $correction);
+}
+@mixin media($minwidth, $maxwidth:0){
+	/////////////////////
+	///	USAGE
+	/////////////////////
+	//	@include media(1200) {
+	//		width: 90%;
+	//	}
+    //	OR
+	//	@include media(1100, 1400) {
+	//		width: 90%;
+	//	}
+    //	OR
+	//	@include media('(min-width: 1367px)') {
+	//		width: 1280px;
+	//	}
+	@if $maxwidth == 0 {
+		@if is-int($minwidth) {
+			@media (min-width: #{$minwidth}px) {
+				@content;
+			}
+		} @else if $minwidth == print {
+			@media print {
+				@content;
+			}
+		} @else {
+			@media #{$minwidth} {
+				@content;
+			}
+		}
+	} @else {
+		@if is-int($minwidth) {
+			@if $minwidth == 0 {
+				@media (max-width: #{$maxwidth}px) {
+					@content;
+				}
+			} @else {
+				@media (min-width: #{$minwidth}px) and (max-width: #{$maxwidth}px) {
+					@content;
+				}
+			}
+		}
+	}
+}
+@mixin keyframes($name){
+	/////////////////////
+	///	USAGE
+	/////////////////////
+	//	@include keyframes(animate) {
+	//		50% {
+	//			transform: rotate(90deg);
+	//		}
+	//		100% {
+	//			transform: rotate(-90deg);
+	//		}
+	//	}
+	@-webkit-keyframes #{$name} {
+		@content;
+	}
+	@-moz-keyframes #{$name} {
+		@content;
+	}
+	@keyframes #{$name} {
+		@content;
+	}
+}
+@mixin optional-at-root($sel) {
+	@at-root #{if(not &, $sel, selector-append(&, $sel))} {
+		@content;
+	}
+}
+@mixin placeholder {
+	@include optional-at-root('::-webkit-input-placeholder') { /* Chrome */
+		@content;
+	}
+	@include optional-at-root(':-moz-placeholder') { /* Firefox 19+ */
+		@content;
+		opacity: 1;
+	}
+	@include optional-at-root('::-moz-placeholder') { /* Firefox 4 - 18 */
+		@content;
+		opacity: 1;
+	}
+	@include optional-at-root(':-ms-input-placeholder') { /* IE 10+ */
+		@content;
+	}
+	@include optional-at-root('::-o-input-placeholder') { /* Safari, Chrome and Opera */
+		@content;
+	}
+}
+@mixin transition($transition...) {
+	@include css3-prefix('transition', $transition);
+}
+@mixin transform($transforms...){
+	@include css3-prefix('transform', $transforms);
+}
+@mixin transition-property($property...) {
+	@include css3-prefix('transition-property', $property);
+}
+@mixin transition-duration($duration...) {
+	@include css3-prefix('transition-duration', $duration);
+}
+@mixin transition-timing-function($timing...) {
+	@include css3-prefix('transition-timing-function', $timing);
+}
+@mixin transition-delay($delay...) {
+	@include css3-prefix('transition-delay', $delay);
+}
+@mixin opacity($opacity: 1) {
+	@if $opacity > 1 {
+		$opacity: $opacity / 100;
+	}
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=#{$opacity*100})";
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=#{$opacity*100});
+	filter: alpha(opacity=$opacity*100);
+	@include css3-prefix('opacity', $opacity);
+}
+@mixin rotate($degrees, $zoom: null) {
+	@include css3-prefix('transform', "rotate(#{$degrees}deg)");
+	filter:progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=#{cos($degrees)}, M12=-#{sin($degrees)}, M21=#{sin($degrees)}, M22=#{cos($degrees)});
+	-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=#{cos($degrees)}, M12=-#{sin($degrees)}, M21=#{sin($degrees)}, M22=#{cos($degrees)})";
+	@if ($zoom != null) {
+		zoom: $zoom;
+	}
+}
+@mixin box-shadow($value...) {
+	@include css3-prefix('box-shadow', $value);
+}
+@mixin border-radius($radius) {
+	@include css3-prefix('border-radius', $radius);
+}
+@mixin border-radius-separate($topLeftRadius: 0px, $topRightRadius: 0px, $bottomLeftRadius: 0px, $bottomRightRadius: 0px) {
+	-webkit-border-top-left-radius:     $topLeftRadius;
+	-webkit-border-top-right-radius:    $topRightRadius;
+	-webkit-border-bottom-right-radius: $bottomRightRadius;
+	-webkit-border-bottom-left-radius:  $bottomLeftRadius;
+
+	-moz-border-radius-topleft:     $topLeftRadius;
+	-moz-border-radius-topright:    $topRightRadius;
+	-moz-border-radius-bottomright: $bottomRightRadius;
+	-moz-border-radius-bottomleft:  $bottomLeftRadius;
+
+	border-top-left-radius:     $topLeftRadius;
+	border-top-right-radius:    $topRightRadius;
+	border-bottom-right-radius: $bottomRightRadius;
+	border-bottom-left-radius:  $bottomLeftRadius;
+}
+@mixin background-size($value) {
+	@include css3-prefix('background-size', $value);
+}
+@mixin retina($path, $cap: 2, $size: auto auto, $extras: null) {
+	/**
+	 * Allows you to use retina images at various pixel densities.
+	 * Examples:
+	 *
+	 *   @include retina(/images/mypic.jpg, 2);
+	 *   @include retina(/images/mypic.jpg, 3, 100px 100px, left top no-repeat transparent);
+	 *
+	 * @param  {Value}  $path               The path to the file name minus extension.
+	 * @param  {Number} $cap:    2          The highest pixel density level images exist for.
+	 * @param  {Value}  $size:   auto auto  The intended width of the rendered image.
+	 * @param  {Value}  $extras: null       Any other `background` values to be added.
+	 */
+	/*
+	* Set a counter and get the length of the image path.
+	*/
+	$position: -1;
+	$strpath: '#{$path}';
+	$length: str-length($strpath);
+
+	@for $i from $length through $length - 10{
+		@if $position == -1 {
+			$char : str-slice($strpath, $i, $i);
+			@if str-index($char, ".") == 1 {
+				$position: $i;
+			}
+		}
+	}
+
+	@if $position != -1 {
+		$ext: str-slice($strpath, $position + 1, $length);
+		$base: str-slice($strpath, 1, $position - 1);
+		$at1x_path: "#{$base}.#{$ext}";
+		$at2x_path: "#{$base}@2x.#{$ext}";
+
+		@include css3-prefix('background', "url('#{$at1x_path}') #{$extras}");
+		@include css3-prefix('background-size', $size);
+
+		@media all and (-webkit-min-device-pixel-ratio : 1.5),
+		all and (-o-min-device-pixel-ratio: 3/2),
+		all and (min--moz-device-pixel-ratio: 1.5),
+		all and (min-device-pixel-ratio: 1.5) {
+			@include css3-prefix('background', "url('#{$at2x_path}') #{$extras}");
+			@include css3-prefix('background-size', $size);
+		}
+		@if $cap >= 2 {
+			@for $env from 2 through $cap {
+				$suffix: "@#{$env}x";
+				@media (-webkit-min-device-pixel-ratio: $env),
+				(min-resolution: $env * 96dpi) {
+					@include css3-prefix('background', "url('#{$base}#{$suffix}.#{$ext}') #{$extras}");
+					@include css3-prefix('background-size', $size);
+				}
+			}
+		}
+	} @else {
+		@include css3-prefix('background', "url('#{$path}') #{$extras}");
+		@include css3-prefix('background-size', $size);
+	}
+}
+@mixin btn-border-drawing($color: #ccc, $hover: black, $width: 2px, $vertical: top, $horizontal: left, $duration: 0.25s){
+	/*
+		@include btn-border-drawing(#58afd1, #ffe593, 4px, bottom, right);
+	*/
+	box-shadow: inset 0 0 0 $width $color;
+	color: $color;
+	transition: color $duration $duration/3;
+	position: relative;
+	&::before,
+	&::after{
+		border: 0 solid transparent;
+		box-sizing: border-box;
+		content: '';
+		pointer-events: none;
+		position: absolute;
+		width: 0;
+		height: 0;
+		#{$vertical}: 0; 
+		#{$horizontal}: 0;
+	}
+	&::before {
+		$h-side: if($horizontal == 'left', 'right', 'left');
+		border-#{$vertical}-width: $width;
+		border-#{$h-side}-width: $width;
+	}
+	&::after {
+		$v-side: if($vertical == 'top', 'bottom', 'top');
+		border-#{$v-side}-width: $width;
+		border-#{$horizontal}-width: $width;
+	}
+	&:hover {
+		color: $hover;
+		&::before,
+		&::after{
+			border-color: $hover;
+			transition: border-color 0s, width $duration, height $duration;
+			width: 100%;
+			height: 100%;
+		}
+		&::before{
+			transition-delay: 0s, 0s, $duration;
+		}
+		&::after{
+			transition-delay: 0s, $duration, 0s;
+		}
+	}
+}
+@mixin bodyAndFooterHeight($Array, $type:body, $param:margin-bottom){
+	
+	@if $type == body {
+		$param:'margin-bottom';
+	} @else if $type == footer {
+		$param:'height';
+	}
+
+	@each $i, $element in $Array {
+	    @if( $i == 0 ){
+	        #{$param}: map-get($element, height);
+	    } @else {
+	        @include media(map-get($element, width)){
+	            #{$param}: map-get($element, height);
+	        }
+	    }
+	}
+    // @if $type == body {
+    //     @each $i, $element in $Array {
+    //         @if( $i == 0 ){
+    //             margin-bottom: map-get($element, height);
+    //         } @else {
+    //             @include media(map-get($element, width)){
+    //                 margin-bottom: map-get($element, height);
+    //             }
+    //         }
+    //     }
+    // } @else {
+    //     @each $i, $element in $Array {
+    //         @if( $i == 0 ){
+    //             height: map-get($element, height);
+    //         } @else {
+    //             @include media(map-get($element, width)){
+    //                 height: map-get($element, height);
+    //             }
+    //         }
+    //     }
+    // }
+}
+@function max($numbers...) {
+	@return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+	@return m#{i}n(#{$numbers});
+}
+
+@function rem-separator($list, $separator: false){
+	@if $separator == "comma" or $separator == "space" {
+		@return append($list, null, $separator);
+	}
+	@if function-exists("list-separator") == true {
+		@return list-separator($list);
+	}
+	// list-separator polyfill by Hugo Giraudel (https://sass-compatibility.github.io/#list_separator_function)
+	$test-list: ();
+	@each $item in $list {
+		$test-list: append($test-list, $item, space);
+	}
+	@return if($test-list == $list, space, comma);
+}
+@mixin rem-basefont($zoom: 100%) {
+	font-size: $zoom / 16px * $rem-basefont;
+}
+@function rem-convert($to, $values...) {
+	$result: ();
+	$separator: rem-separator($values);
+	@each $value in $values {
+		@if type-of($value) == "number" and unit($value) == "rem" and $to == "px" {
+			$result: append($result, $value / 1rem * $rem-basefont, $separator);
+		} @else if type-of($value) == "number" and unit($value) == "px" and $to == "rem" {
+			$result: append($result, $value / $rem-basefont * 1rem, $separator);
+		} @else if type-of($value) == "list" {
+			$value-separator: rem-separator($value);
+			$value: rem-convert($to, $value...);
+			$value: rem-separator($value, $value-separator);
+			$result: append($result, $value, $separator);
+		} @else {
+			$result: append($result, $value, $separator);
+		}
+	}
+	@return if(length($result) == 1, nth($result, 1), $result);
+}
+@function rem($values...) {
+	@if $rem-px-only {
+		@return rem-convert(px, $values...);
+	} @else {
+		@return rem-convert(rem, $values...);
+	}
+}
+@mixin rem($properties, $values...) {
+	@if type-of($properties) == "map" {
+		@each $property in map-keys($properties) {
+			@include rem($property, map-get($properties, $property));
+		}
+	} @else {
+		@each $property in $properties {
+			@if $rem-fallback or $rem-px-only {
+				#{$property}: rem-convert(px, $values...);
+			}
+			@if not $rem-px-only {
+				#{$property}: rem-convert(rem, $values...);
+			}
+		}
+	}
+}
+@function svg-url($svg){
+    //
+    //  Add missing namespace
+    //
+    @if not str-index($svg,xmlns) {
+        $svg: str-replace($svg, '<svg','<svg xmlns="http://www.w3.org/2000/svg"');   
+    }        
+    //    
+    //  Chunk up string in order to avoid 
+    //  "stack level too deep" error
+    //     
+    $encoded:'';
+    $slice: 2000;
+    $index: 0;
+    // $loops: ceil(str-length($svg)/$slice);
+
+	$loops: ceil(math.div(str-length($svg), $slice));
+
+    @for $i from 1 through $loops {
+        $chunk: str-slice($svg, $index, $index + $slice - 1); 
+        //
+        //   Encode 
+        //
+        $chunk: str-replace($chunk, '"', '\'');
+        $chunk: str-replace($chunk, '%', '%25');
+        $chunk: str-replace($chunk, '#', '%23');       
+        $chunk: str-replace($chunk, '{', '%7B');
+        $chunk: str-replace($chunk, '}', '%7D');         
+        $chunk: str-replace($chunk, '<', '%3C');
+        $chunk: str-replace($chunk, '>', '%3E');
+        
+        // 
+        //    The maybe list 
+        //
+        //    Keep size and compile time down
+        //    ... only add on documented fail 
+        // 
+        //  $chunk: str-replace($chunk, '&', '%26');        
+        //  $chunk: str-replace($chunk, '|', '%7C');
+        //  $chunk: str-replace($chunk, '[', '%5B');
+        //  $chunk: str-replace($chunk, ']', '%5D');
+        //  $chunk: str-replace($chunk, '^', '%5E');
+        //  $chunk: str-replace($chunk, '`', '%60');
+        //  $chunk: str-replace($chunk, ';', '%3B');
+        //  $chunk: str-replace($chunk, '?', '%3F');
+        //  $chunk: str-replace($chunk, ':', '%3A');
+        //  $chunk: str-replace($chunk, '@', '%40');
+        //  $chunk: str-replace($chunk, '=', '%3D');      
+        
+        $encoded: #{$encoded}#{$chunk};
+        $index: $index + $slice; 
+    }
+    @return url("data:image/svg+xml,#{$encoded}");   
+}
+        
+//  Background svg mixin          
+@mixin background-svg($svg){
+    background-image: svg-url($svg);        
+}        
+            
+//  Helper function to replace characters in a string
+@function str-replace($string, $search, $replace: ''){
+	$index: str-index($string, $search);
+    @return if($index, str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace), $string); 
+}

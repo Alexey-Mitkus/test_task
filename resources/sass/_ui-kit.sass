@@ -1,0 +1,406 @@
+// UI-KIT Элементов сайта
+
+// Кнопка закрытия (крестик)
+// Применяется к изображению у которого имеется свойство position: relative
+.ui__close-btn
+    position: absolute
+    right: 20px
+    top: 20px
+    cursor: pointer
+    transform: rotate(0deg)
+    transition: transform 0.3s
+    z-index: 1
+    &:hover
+        transform: rotate(180deg)
+        transition:  transform 0.3s
+
+// Кнопки (button) может применяться к следующим тегам button, submit, a, div, span
+// Красная кнопка
+.ui-btn-red
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    padding: 12px 32px
+    width: auto
+    background: #C23D3C
+    border-radius: 4px
+    font-family: 'PT Sans'
+    font-style: normal
+    font-weight: bold
+    font-size: 15px
+    line-height: 22px
+    text-align: center
+    color: #FFFFFF
+    cursor: pointer
+    box-sizing: border-box
+    &:hover, &:focus
+        background: rgba(194, 61, 60, 0.92)
+    &:active
+        background: #AE2726
+
+// Белая кнопка
+.ui-btn-white
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    padding: 12px 32px
+    width: auto
+    border: 1px solid #57585C
+    color: #57585C
+    border-radius: 4px
+    font-family: 'PT Sans'
+    font-style: normal
+    font-weight: bold
+    font-size: 17px
+    line-height: 24px
+    text-align: center
+    cursor: pointer
+    box-sizing: border-box
+    &:hover, &:active, &:focus
+        border: 1px solid #363638
+        color: #363638
+
+// Кнопка цвет antic
+.ui-btn-antic
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    padding: 12px 32px
+    width: auto
+    background-color: #EFECE6
+    color: #253639
+    border-radius: 4px
+    font-family: 'PT Sans'
+    font-style: normal
+    font-weight: bold
+    font-size: 17px
+    line-height: 24px
+    text-align: center
+    cursor: pointer
+    box-sizing: border-box
+    &:hover,  &:focus
+        background-color: #F4F1EB
+        color: #253639
+        text-decoration: none
+    &:active
+        background-color: #E1DDD4
+        color: #253639
+
+// Кнопка цвет disabled
+.ui-btn-disabled
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    padding: 12px 32px
+    width: auto
+    background-color: #D5D5D5
+    border-radius: 4px
+    font-family: 'PT Sans'
+    font-style: normal
+    font-weight: bold
+    font-size: 15px
+    line-height: 22px
+    text-align: center
+    color: #FFFFFF
+    cursor: pointer
+    box-sizing: border-box
+    &:hover,  &:focus
+        background-color: #D5D5D5
+        color: #FFFFFF
+        text-decoration: none
+    &:active
+        background-color: #D5D5D5
+        color: #FFFFFF
+
+
+// FORMS
+
+// input field
+// .ui-kit-input
+//     display: flex
+//     flex-direction: column
+//     align-items: flex-start
+//     justify-content: flex-start
+//     position: relative
+//     width: 100%
+//     background-color: #fff
+//     .input
+//         display: flex
+//         flex-direction: row
+//         position: relative
+//         width: 100%
+//         padding: 16px 40px 24px 16px
+//         font-weight: normal
+//         font-size: 15px
+//         line-height: 22px
+//         border: 1px solid #E7E7E7
+//         box-sizing: border-box
+//         border-radius: 4px
+
+.ui-kit-input
+    width: 100%
+    height: 64px
+    position: relative
+    input
+        display: block
+        width: 100%
+        height: 100%
+        border: 1px solid #E7E7E7
+        border-radius: 4px
+        padding: 16px 16px 26px
+        font-weight: normal
+        font-size: 15px
+        line-height: 22px
+        color: #4C595C
+    label 
+        color: #848D8E
+        font-size: 15px
+        line-height: 22px
+        position: absolute
+        pointer-events: none
+        left: 16px
+        top: 17px
+        transition: 0.2s ease all
+    input:focus, input:valid
+        padding: 30px 16px 10px
+    input:focus
+        border: 1px solid #363638
+
+    input:focus ~ label, input:valid ~ label
+        top: 4px
+        left: 17px
+        font-size: 12px
+        line-height: 20px
+    .error-icon
+        display: block
+        position: absolute
+        right: 15px
+        top: 20px
+        background-image: url('../../images/services/error_icon.svg')
+        width: 24px
+        height: 24px
+    .form-desc
+        font-size: 15px
+        line-height: 22px
+        color: #848D8E
+        margin-bottom: 20px
+    .alert-msg
+        color: #F70330
+    .border-red
+        border: 1px solid #F70330
+
+.ui-kit-textaria
+    position: relative
+    width: 100%
+    height: 98px
+    .ui-textaria
+        width: 100%
+        height: 100%
+        padding: 20px 16px 10px
+        border: none
+        margin-top: 0px
+        font-size: 17px
+        line-height: 24px
+        color: #334043
+        background: none
+        resize: none
+        border: 1px solid #E7E7E7
+        box-sizing: border-box
+        border-radius: 4px
+        &:focus
+            border: 1px solid #363638
+    label
+        position: absolute
+        color: #919399
+        top: 20px
+        left: 16px
+        font-size: 15px
+        line-height: 22px
+        transition: 0.2s ease all
+        margin-bottom: 0
+    .ui-textaria:focus ~ label, .ui-textaria:valid ~ label
+        top: 0px
+        font-size: 14px
+        color: #919399
+
+    // &:focus
+    //     border: 1px solid #363638
+
+// castom check-box
+.ui-kit__check-item
+    display: flex
+    align-items: center
+    margin: 0 38px 0 0
+    padding: 0
+    &::last-child
+        margin: 0
+
+    .ui-kit__custom-checkbox
+        position: absolute
+        z-index: -1
+        opacity: 0
+
+    .ui-kit__custom-checkbox + label 
+        display: inline-flex
+        align-items: center
+        user-select: none
+        cursor: pointer
+        margin-bottom: 0
+        font-weight: normal
+        font-size: 17px
+        line-height: 24px
+        color: #4C595C
+        &:before 
+            content: ''
+            display: inline-block
+            width: 20px
+            height: 20px
+            border: 1px solid #EFECE6
+            background: #FFFFFF
+            border-radius: 4px
+            margin-right: 14px
+            cursor: pointer
+            box-sizing: border-box
+
+    .ui-kit__custom-checkbox:checked+label::before
+        background-image: url("/storage/images/speakers/chekbox-active-red.svg")
+        background-position: center center
+        background-repeat: no-repeat
+        background-size: contain
+        border: none 
+
+// castom radio
+.ui-kit__radio //input-radio
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    flex-wrap: wrap
+    width: 100%
+    .ui-kit__custom-radio
+        position: absolute
+        z-index: -1
+        opacity: 0
+        margin-right: 14px
+    .ui-kit__custom-radio + label 
+        display: inline-flex
+        align-items: center
+        user-select: none
+        cursor: pointer
+        width: 20%
+    label
+        margin-right: 31px
+        margin-bottom: 24px
+        font-weight: normal
+        font-size: 17px
+        line-height: 24px
+        color: #4C595C
+
+    .ui-kit__custom-radio + label::before 
+        content: ''
+        display: inline-block
+        width: 1em
+        height: 1em
+        flex-shrink: 0
+        flex-grow: 0
+        border: 1px solid #adb5bd
+        border-radius: 50%
+        margin-right: 0.5em
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: 50% 50%
+    .ui-kit__custom-radio:focus+label::before 
+            box-shadow: 0 0 0 0.2rem rgba(155, 65, 49, 0.25)
+            
+    .ui-kit__custom-radio:not(:disabled):active + label::before
+        background-color: #c02c3181
+        border-color: #c02c3181
+    .ui-kit__custom-radio:focus + label::before 
+        box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25)
+    .ui-kit__custom-radio:checked + label::before 
+        box-sizing: border-box
+        border: 6px solid #C22A2E
+    
+    .ui-kit__custom-radio:disabled + label::before 
+        background-color: #c02c3181
+
+// accardeon
+.ui-kit__accardeon
+    display: flex
+    flex-wrap: wrap
+    justify-content: flex-start
+    margin-top: 12px
+    margin-bottom: 32px
+    padding: 0 16px
+    border: 1px solid #E7E7E7
+    box-sizing: border-box
+    border-radius: 4px
+    position: relative
+        
+    .ui-kit__accardeon-show
+        position: absolute
+        right: 20px
+        top: 30px
+        width: 0
+        height: 0
+        appearance: none
+        -webkit-appearance: none
+
+    label // заголовок аккардеона
+        display: block
+        width: 100%
+        height: 62px
+        margin-bottom: 0
+        padding-top: 20px 
+        font-weight: bold
+        font-size: 17px
+        line-height: 24px
+        color: #4C595C
+        cursor: pointer
+        z-index: 1
+
+    // иконки раскрытия аккрадеона
+    .open-accardeon-icon, .open-accardeon-icon2
+        position: absolute
+        display: block
+        width: 20px
+        right: 20px
+        top: 30px
+        background-color: #C23D3C
+        border: 1px solid #C23D3C
+        border-radius: 4px
+    
+    .open-accardeon-icon2
+        transform: rotate(90deg)
+        transition: transform 0.2s
+
+    // логика открытия
+    .ui-kit__accardeon-show:checked ~ .ui-kit__accardeon-content
+        display: flex
+    .ui-kit__accardeon-show:checked ~ .open-accardeon-icon2
+        transform: rotate(0deg)
+        transition: transform 0.2s
+    
+    // контент аккардеона
+    .ui-kit__accardeon-content
+        display: none
+        flex-wrap: wrap
+        justify-content: flex-start
+        width: 100%
+        padding-bottom: 20px
+
+
+
+// ОТСТУПЫ ВНЕШНИЕ
+.mb12
+    margin-bottom: 12px
+.mb20
+    margin-bottom: 20px
+.mb52
+    margin-bottom: 52px 
+
+
+

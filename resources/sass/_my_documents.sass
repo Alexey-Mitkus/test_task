@@ -1,0 +1,565 @@
+// passport  
+button:active
+    outline: none
+    border: none
+button:focus
+    outline: none
+    border: none
+
+.my-documents__main
+    padding: 0
+
+// HEADER
+.my-documents__header
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    padding: 32px
+    width: 100%
+    min-height: 208px
+    border-radius: 4px
+    position: relative
+    background-image: url('../../images/passport/passport_header_background.png')
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: top left
+    &-content
+        width: 585px
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        z-index: 1
+        h1
+            font-family: 'PT Sans'
+            font-style: normal
+            font-weight: bold
+            font-size: 42px
+            line-height: 50px
+            display: flex
+            text-align: left
+            margin: 0
+            margin-bottom: 12px
+            color: #FFFFFF
+        h3
+            font-family: 'PT Sans'
+            font-style: normal
+            font-weight: normal
+            font-size: 20px
+            line-height: 26px
+            color: #FFFFFF
+            text-align: left
+            margin: 0
+
+// CONTENT passport
+
+.my-documents__content
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
+    width: 100%
+    padding-top: 32px
+    
+    // note
+    &-note
+        width: 100%
+        height: 300px
+        background: #e0e0e0
+        border-radius: 15px
+        padding: 70px 50px
+        text-align: center
+        &-icon
+
+            background-repeat: no-repeat
+            height: 101px
+            width: 81px
+            display: block
+            margin: 0 auto
+            margin-bottom: 20px
+        &-description
+            font-style: normal
+            font-weight: bold
+            font-size: 24px
+            text-align: center
+            color: #0A4551
+    // Элемменты управления
+    .my-documents__categories
+        display: flex
+        justify-content: space-between
+        width: 100%
+        height: 48px
+        font-family: 'PT Sans'
+        margin-bottom: 32px
+        &-sort
+            display: flex
+            flex-direction: row
+            justify-content: flex-start
+            align-items: flex-end
+            width: 100%
+            height: 48px
+            margin-right: 20px
+            border-bottom: 2px solid #E7E7E7
+            color: #2B3E42
+            font-family: 'PT Sans'
+            font-style: normal
+            font-size: 17px
+            line-height: 24px
+            cursor: pointer
+            .status
+                display: flex
+                justify-content: center
+                align-items: flex-end
+                position: relative
+                bottom: -3px
+                margin-right: 52px
+                height: 34px
+                padding-bottom: 18px
+                width: auto
+                cursor: pointer
+            .active
+                font-weight: bold
+                color: #C23D3C
+                position: relative
+                bottom: -3px
+                padding-bottom: 14px
+                border-radius: 4px
+                border-bottom: 4px solid #C23D3C
+                cursor: pointer
+
+        &-btn // Кнопка добавить документ
+            display: flex
+            flex-direction: row
+            justify-content: center
+            align-items: center
+            width: 285px
+            padding: 12px 32px
+            background: #C23D3C
+            border-radius: 4px
+            font-family: PT Sans
+            font-style: normal
+            font-weight: bold
+            font-size: 17px
+            line-height: 24px
+            color: #FFFFFF
+            text-align: center
+            &:hover
+                background: rgba(194, 61, 60, 0.92)
+            &:active
+                background: #AE2726 
+    
+    // Раздел с черновиками лиюо готовыми паспортами
+    .my-documents__table
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        align-items: center
+        width: 100%
+        &-drafts, &-ready
+            width: 100%
+            margin-bottom: 52px
+            font-family: 'PT Sans'
+            font-style: normal
+            // Поиск по документам
+            .digital_title-categoty
+                display: flex
+                flex-direction: row
+                justify-content: space-between
+                align-items: center
+                margin-bottom: 12px
+                h3
+                    margin: 0
+                    display: block
+                    width: 30%
+                    text-align: left
+                    font-weight: bold
+                    font-size: 28px
+                    line-height: 34px
+                    color: #253639
+                .my-documents__searching
+                    display: flex
+                    flex-direction: row
+                    justify-content: space-between
+                    align-items: center
+                    width: 70%
+                    min-height: 44px
+                    
+                    &-search, &-filter
+                        display: flex
+                        flex-direction: row
+                        align-items: center
+                        height: 44px
+                        padding: 10px 16px
+                        background-color: #fff
+                        border-radius: 4px
+                        font-size: 15px
+                        line-height: 24px
+                        color: #363638
+                        img
+                            margin-right: 15px
+                    &-search
+                        margin-right: 20px
+                        width: 67%
+                        input
+                            width: 100%
+                            font-weight: normal
+                            
+                    &-filter
+                        width: 285px
+                        select
+                            border: none
+                            width: 220px
+                        select:focus-visible
+                            outline: none
+        // Заголовки таблицы
+        &-title, &-item
+            width: 100%
+            height: 44px
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            align-items: center
+            background-color: #fff
+            margin-bottom: 12px
+            padding: 10px 16px
+            font-family: "PT Sans"
+            font-weight: bold
+            font-size: 17px
+            line-height: 24px
+            text-align: left
+            color: #253639
+            img
+                cursor: pointer
+        
+        &-item
+            height: auto
+            min-height: 44px
+            text-align: left
+            font-weight: normal
+
+        .my-documents__table-name
+            width: 370px
+        .my-documents__table-type
+            width: 160px
+        .my-documents__table-date
+            width: 130px
+        .my-documents__table-btns
+            display: flex
+            flex-direction: row
+            justify-content: space-around
+            align-items: center
+            width: 176px   
+        .my-documents__mobyle-title
+            display: none
+
+    // passport popup
+    .popup__content
+        display: flex
+        flex-direction: column
+        max-width: 880px
+        min-height: 50px
+        background-color: #fff
+        border-radius: 4px
+        // padding: 32px
+        font-family: PT Sans
+        font-style: normal
+        color: #253639
+        .close-btn
+            position: absolute
+            right: 20px
+            top: 16px
+            cursor: pointer
+            transform: rotate(0deg)
+            transition: transform 0.3s
+            &:hover
+                transform: rotate(180deg)
+                transition: transform 0.3s
+            
+        h3  
+            margin: 0
+            font-weight: bold
+            font-size: 32px
+            line-height: 40px
+            text-align: left
+            color: #353432
+            margin-bottom: 16px
+        p
+            text-align: left
+            font-weight: normal
+            font-size: 20px
+            line-height: 26px
+        form
+            width: 100%
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            box-sizing: border-box
+            margin: 0 0 10px 
+            label
+                margin-left: 5px
+                font-family: PT Sans
+                font-weight: normal
+                font-size: 18px
+                line-height: 100%
+                color: #353432
+
+            .red-border
+                transition: all 0.3s
+                border: 3px solid #c44039
+            .input-radio
+                margin-top: 14px
+                margin-bottom: 10px
+            .custom-radio
+                position: absolute
+                z-index: -1
+                opacity: 0
+                margin-right: 14px
+            .custom-radio + label 
+                display: inline-flex
+                align-items: center
+                user-select: none
+                cursor: pointer
+            label
+                margin-right: 38px
+                font-weight: normal
+                font-size: 17px
+                line-height: 24px
+            .custom-radio + label::before 
+                content: ''
+                display: inline-block
+                width: 1em
+                height: 1em
+                flex-shrink: 0
+                flex-grow: 0
+                border: 1px solid #adb5bd
+                border-radius: 50%
+                margin-right: 0.5em
+                background-repeat: no-repeat
+                background-position: center center
+                background-size: 50% 50%
+            .custom-radio:focus+label::before 
+                box-shadow: 0 0 0 0.2rem rgba(155, 65, 49, 0.25)
+                
+            .custom-radio:not(:disabled):active + label::before
+                background-color: #c02c3181
+                border-color: #c02c3181
+            .custom-radio:focus + label::before 
+                box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25)
+            .custom-radio:checked + label::before 
+                box-sizing: border-box
+                border: 6px solid #C22A2E
+            
+            .custom-radio:disabled + label::before 
+                background-color: #c02c3181
+        button
+            width: 155px
+            height: 40px
+            padding: 6px
+            margin-top: 15px
+            background: #0A4551
+            border-radius: 100px
+            text-align: center
+            font-family: PT Sans
+            font-style: normal
+            font-weight: bold
+            font-size: 16px
+            line-height: 130%
+            color: #FFFFFF
+        .passport__del-btn
+            display: flex
+            flex-direction: row
+            justify-content: flex-start
+            align-items: center
+            width: 100%
+        .passport__del-btn-yes
+            display: flex
+            flex-direction: row
+            justify-content: center
+            align-items: center
+            width: 124px
+            padding: 12px 32px
+            margin-right: 24px
+            background: #C23D3C
+            border-radius: 4px
+            font-family: PT Sans
+            font-style: normal
+            font-weight: bold
+            font-size: 17px
+            line-height: 24px
+            color: #FFFFFF
+            text-align: center
+            &:hover
+                background: rgba(194, 61, 60, 0.92)
+            &:active
+                background: #AE2726 
+        .passport__del-btn-no
+            display: flex
+            flex-direction: row
+            justify-content: center
+            align-items: center
+            width: 137px
+            padding: 12px 32px
+            margin-right: 24px
+            background: #EFECE6
+            border-radius: 4px
+            font-family: PT Sans
+            font-style: normal
+            font-weight: bold
+            font-size: 17px
+            line-height: 24px
+            color:  #253639
+            text-align: center
+            &:hover
+                background: #F4F1EB
+            &:active
+                background: #E1DDD4       
+
+// MEDIA
+@media screen and (max-width: 991px)
+    // HEADER
+
+    // CONTENT
+    .my-documents__content
+        padding: 28px 16px 0
+        .my-documents__table-drafts, .my-documents__table-ready
+            .digital_title-categoty
+                h3
+                    font-size: 25px
+                    line-height: 30px
+
+@media screen and (max-width: 768px)
+    // HEADER
+    .my-documents__header
+        .my-documents__header-content
+            h1
+                font-size: 32px
+                line-height: 36px
+            h3
+                font-size: 16px
+                line-height: 24px
+        img
+            width: 170px
+    // DOCUMENTS
+    .my-documents__content
+        .my-documents__table-drafts, .my-documents__table-ready
+            
+            .my-documents__table-title, .my-documents__table-item
+                font-size: 15px
+                line-height: 22px
+                .my-documents__table-name
+                    width: 350px
+                .my-documents__table-type
+                    width: 160px
+                .my-documents__table-date
+                    width: 130px
+                
+                .my-documents__mobyle-title
+                    display: none
+        
+        // passport popup
+        .popup__content
+            width: auto
+            h3
+                font-size: 24px
+                line-height: 30px
+                margin-bottom: 0
+
+
+@media screen and (max-width: 425px)
+    // HEADER
+    .my-documents__header
+        min-height: 156px
+        padding: 16px
+        background-position: top center
+        .my-documents__header-content
+            width: 100%
+            h1
+                font-size: 32px
+                line-height: 40px
+            h3
+                font-size: 17px
+                line-height: 24px
+        img
+            display: none
+    // CONTENT
+    .my-documents__content
+        padding: 28px 16px 0
+        // SORT & NEW DOC
+        .my-documents__categories
+            flex-direction: column-reverse
+            height: auto
+            .my-documents__categories-sort
+                justify-content: space-between
+                margin-right: 0
+            .my-documents__categories-btn
+                width: 100%
+                margin-bottom: 32px
+                font-size: 15px
+                line-height: 22px
+            .my-documents__categories-sort
+                height: 22px
+                margin-bottom: 0
+                .status
+                    margin-right: 10px
+                    padding-bottom: 12px
+                    font-size: 15px
+                    line-height: 22px
+                .status:last-child
+                    margin-right: 0px
+                .active
+                    padding-bottom: 8px
+        
+    // DOCUMENTS
+    .my-documents__content
+        .my-documents__table-drafts, .my-documents__table-ready
+            .digital_title-categoty
+                flex-direction: column
+                align-items: flex-start
+                h3  
+                    width: 100%
+                    font-size: 24px
+                    line-height: 32px
+                    margin-bottom: 12px
+                .my-documents__searching
+                    flex-direction: column
+                    align-items: flex-start
+                    width: 100%
+                    .my-documents__searching-search 
+                        width: 100%
+                        margin-bottom: 12px
+                    .my-documents__searching-filter
+                        width: 100%
+                        select
+                            width: 100%
+            .my-documents__table-title, .my-documents-desctop-show
+                display: none
+            
+            .my-documents__table-item
+                flex-direction: column
+                align-items: flex-start
+                padding: 16px
+                .my-documents__table-name, .my-documents__table-type, .my-documents__table-date
+                    margin-bottom: 12px
+                    font-size: 15px
+                    line-height: 22px
+                .my-documents__mobyle-title
+                    padding-top: 12px
+                    margin-bottom: 8px
+                    border-top: 1px solid #F0EEE9
+                    width: 100%
+                    display: block
+                    text-align: left
+                    font-weight: bold
+                    font-size: 15px
+                    line-height: 22px
+                    color: #848D8E
+        
+        // passport popup
+        .popup__content
+            width: auto
+            h3
+                font-size: 20px
+                line-height: 28px
+                margin-bottom: 0
+
+            
