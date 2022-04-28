@@ -760,6 +760,7 @@ a.usual{
     color: #fff;
     font-size: 25px;
     max-width: 501px;
+    margin-top: 50px;
 }
 .about__text{
     max-width: 400px;
@@ -1155,7 +1156,7 @@ a.usual{
     }
     .about__title {
         padding: 20px;
-        margin: 0 0 50px 0;
+
         background: #9A0000;
     }
     h3 {

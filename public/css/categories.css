@@ -286,7 +286,7 @@
   box-sizing: border-box;
 }
 .ui-kit__check-item .ui-kit__custom-checkbox:checked + label::before {
-  background-image: url("/storage/images/speakers/chekbox-active-red.svg");
+  background-image: url("../../images/statspikerom/chekbox-active-red.svg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -359,11 +359,12 @@
 .ui-kit__accardeon {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: start;
   margin-top: 12px;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
   padding: 0 16px;
   border: 1px solid #E7E7E7;
+  background-color: #fff;
   box-sizing: border-box;
   border-radius: 4px;
   position: relative;
@@ -383,13 +384,16 @@
   width: 100%;
   height: 62px;
   margin-bottom: 0;
-  padding-top: 20px;
+  padding-top: 18px;
   font-weight: bold;
   font-size: 17px;
   line-height: 24px;
-  color: #4C595C;
+  color: #253639;
   cursor: pointer;
   z-index: 1;
+}
+.ui-kit__accardeon .accordeon-check {
+  opacity: 0;
 }
 .ui-kit__accardeon .open-accardeon-icon, .ui-kit__accardeon .open-accardeon-icon2 {
   position: absolute;
@@ -415,7 +419,7 @@
 .ui-kit__accardeon .ui-kit__accardeon-content {
   display: none;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: start;
   width: 100%;
   padding-bottom: 20px;
 }
@@ -3722,471 +3726,876 @@ select:focus-visible {
     display: none;
   }
 }
-.motivation__wrapper {
-  width: 100%;
-  background-color: #fff;
-}
-
-.motivation__header {
+.motivation {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  margin: 0;
-  padding: 100px 50px 10px;
   width: 100%;
-  height: 410px;
-  background-image: url("../../images/motivation/motivation_header-bg.png");
+}
+.motivation h1, .motivation h2, .motivation h3, .motivation h4, .motivation h5 {
+  margin: 0;
+}
+
+.motovation__header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  padding: 32px 32px 60px;
+  margin-bottom: 20px;
+  background-image: url("../../images/motivation/motivation-header.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top left;
 }
-.motivation__header-title {
-  width: 595px;
-  height: 116px;
-  background: linear-gradient(180deg, #CED6F2 0%, #CCEFFB 0.01%, #FBCCE4 100%);
-  border-radius: 10px;
-  padding: 5px 20px;
-  margin-bottom: 40px;
+.motovation__header .header-content {
+  max-width: 578px;
 }
-.motivation__header-title h1 {
-  font-family: PT Sans;
-  font-style: normal;
-  font-weight: bold;
-  text-align: left;
-  font-size: 60px;
-  line-height: 100%;
-  color: #353432;
+.motovation__header .header-content h1 {
+  margin: 0 0 12px;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 50px;
+  color: #fff;
+}
+.motovation__header .header-content p {
   margin: 0;
-  padding: 0;
-}
-.motivation__header-title h3 {
-  font-family: PT Sans;
-  font-style: normal;
-  font-weight: normal;
-  text-align: left;
-  font-size: 34px;
-  line-height: 100%;
-  color: #353432;
-  margin: 0;
-  padding: 0;
-}
-.motivation__header-border {
-  display: block;
-  width: 40px;
-  height: 4px;
-  background: #CED6F2;
-  border-radius: 5px;
-  margin: 0 0 12px 22px;
-}
-.motivation__header-desc {
-  width: 580px;
-  margin-left: 20px;
-}
-.motivation__header-desc p {
-  font-family: PT Sans;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 19px;
-  line-height: 26px;
-  color: #FFFFFF;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #fff;
 }
 
-.motivation__header-footer {
+.acord-cont-1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  width: 100%;
+}
+.acord-cont-1 .acord-item-1, .acord-cont-1 .acord-item-2 {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.acord-cont-1 .acord-item-1 ul, .acord-cont-1 .acord-item-2 ul {
+  margin: 0px;
+}
+.acord-cont-1 .acord-item-1 ul li, .acord-cont-1 .acord-item-2 ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-bottom: 26px;
+}
+.acord-cont-1 .acord-item-1 ul li span, .acord-cont-1 .acord-item-2 ul li span {
+  font-size: 15px;
+  line-height: 22px;
+  color: #4C595C;
+  margin-left: 12px;
+}
+.acord-cont-1 .acord-item-1 ul li:last-child, .acord-cont-1 .acord-item-2 ul li:last-child {
+  margin-bottom: 0;
+}
+.acord-cont-1 .acord-item-1:first-child, .acord-cont-1 .acord-item-2:first-child {
+  padding-right: 12px;
+}
+
+.acord-cont-2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.acord-cont-2 .cont-2__step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 175px;
+}
+.acord-cont-2 .cont-2__step h3 {
+  font-size: 28px;
+  line-height: 36px;
+  text-align: center;
+  color: #E6E7EB;
+  margin-bottom: 4px;
+}
+.acord-cont-2 .cont-2__step h4 {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 24px;
+  text-align: center;
+  color: #253639;
+  margin-bottom: 2px;
+}
+.acord-cont-2 .cont-2__step p {
+  font-size: 15px;
+  line-height: 22px;
+  text-align: center;
+  color: #4C595C;
+  margin-bottom: 0;
+}
+.acord-cont-2 .border_dotted {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+  width: auto;
+  border-bottom: 3px dotted #E6E7EB;
+}
+
+.acord-cont-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+.acord-cont-3 .acord-cont-3__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 18px 16px;
+  margin-bottom: 12px;
+  border: 1px solid #E7E7E7;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.acord-cont-3 .acord-cont-3__item .cont-3__item-badge {
+  display: flex;
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+}
+.acord-cont-3 .acord-cont-3__item .cont-3__item-badge img {
+  display: block;
+}
+.acord-cont-3 .acord-cont-3__item .cont-3__item-status {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  width: 64px;
+  margin-left: 24px;
+}
+.acord-cont-3 .acord-cont-3__item .cont-3__item-status h5 {
+  margin: 0 0 2px;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 24px;
+  color: #253639;
+}
+.acord-cont-3 .acord-cont-3__item .cont-3__item-status span {
+  font-size: 13px;
+  line-height: 20px;
+  color: #989FA0;
+}
+.acord-cont-3 .acord-cont-3__item .cont-3__item-desc {
+  display: flex;
+  flex-direction: column;
+  margin-left: 24px;
+}
+.acord-cont-3 .acord-cont-3__item .cont-3__item-desc span {
+  font-size: 15px;
+  line-height: 22px;
+  color: #5F6B6D;
+  margin-bottom: 12px;
+}
+.acord-cont-3 .acord-cont-3__item .cont-3__item-desc span:last-child {
+  margin-bottom: 0;
+}
+.acord-cont-3 .acord-cont-3__item:last-child {
+  margin-bottom: 0;
+}
+
+.motivation-proress {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 36px;
+  margin-bottom: 52px;
+}
+.motivation-proress .motivation__title h2 {
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 36px;
+  color: #253639;
+  margin-bottom: 28px;
+}
+.motivation-proress .motivation__cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.motivation-proress .motivation__cards .card-item {
+  width: 285px;
+  border-radius: 4px;
+}
+.motivation-proress .bg-blue {
+  background-color: #73A7F5;
+}
+.motivation-proress .bg-velvet {
+  background-color: #A183F5;
+}
+.motivation-proress .bg-white {
+  background-color: #FFFFFF;
+}
+
+.motivation-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 361px;
+  margin: 24px;
+  padding: 0 24px 24px;
+  border: 2px solid #FFFFFF;
+  border-radius: 4px;
+}
+.motivation-card .card-title {
+  font-weight: bold;
+  text-align: center;
+  font-size: 17px;
+  line-height: 24px;
+  color: #FFFFFF;
+  position: relative;
+  top: -13px;
+  margin-bottom: 0;
+}
+.motivation-card .raiting-item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 24px;
+}
+.motivation-card .raiting-item .raiting-item__title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.motivation-card .raiting-item .raiting-item__title span {
+  margin-left: 12px;
+  font-size: 15px;
+  line-height: 22px;
+  color: #FFFFFF;
+}
+.motivation-card .raiting-item .raiting-item__rating {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.motivation-card .raiting-item .raiting-item__rating .item__rating-percent {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
+  margin-bottom: 4px;
+  font-size: 13px;
+  line-height: 20px;
+  color: #FFFFFF;
+}
+.motivation-card .raiting-item .raiting-item__rating .item__rating-progressbar {
+  width: 100%;
+  height: 3px;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.45);
+}
+.motivation-card .raiting-item .raiting-item__rating .item__rating-progressbar .progressbar-scale {
+  display: block;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #fff;
+}
+.motivation-card .raiting-item:last-child {
+  margin-bottom: 0;
+}
+
+.motivation-card-blocked {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+  height: 361px;
+  margin: 24px;
+  padding: 0 20px 24px;
+  border: 2px solid #F4F4F4;
+  border-radius: 4px;
+}
+.motivation-card-blocked .card-title {
+  font-weight: bold;
+  text-align: center;
+  padding: 0 14px;
+  font-size: 17px;
+  line-height: 24px;
+  color: #989FA0;
+  position: absolute;
+  top: -13px;
+  right: 23px;
+  margin-bottom: 0;
+}
+.motivation-card-blocked .motivation__lock-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.motivation-card-blocked .motivation__lock-block img {
+  margin-bottom: 18px;
+}
+.motivation-card-blocked .motivation__lock-block .motivation__lock-desc {
+  margin: 0;
+  text-align: center;
+  font-size: 13px;
+  line-height: 20px;
+  color: #4C595C;
+}
+
+.motivation-card-double {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 409px;
+  margin: 0;
+  padding: 0;
+  border-radius: 4px;
+}
+.motivation-card-double .up-block {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 12px 24px 18px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+.motivation-card-double .up-block .up-block__title {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 24px;
+  color: #253639;
+  margin-bottom: 16px;
+}
+.motivation-card-double .up-block .up-block__badges {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+.motivation-card-double .up-block .up-block__badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 32%;
+}
+.motivation-card-double .up-block .up-block__badge img {
+  margin-bottom: 12px;
+}
+.motivation-card-double .up-block .up-block__badge .up-block__badge-title {
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 22px;
+  color: #253639;
+  margin-bottom: 2px;
+  text-align: center;
+}
+.motivation-card-double .up-block .up-block__badge .up-block__badge-count {
+  font-size: 13px;
+  line-height: 20px;
+  text-align: center;
+  color: #4C595C;
+  margin-bottom: 0;
+}
+.motivation-card-double .up-block .up-block__badge .title-inactive {
+  color: #989FA0;
+}
+.motivation-card-double .up-block .up-block__badges-progressbar {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.motivation-card-double .up-block .up-block__badges-progressbar .badges-progressbar {
+  height: 2px;
+  width: 100%;
+  background-color: rgba(113, 120, 232, 0.15);
+  border-radius: 2px;
+  margin-bottom: 4px;
+}
+.motivation-card-double .up-block .up-block__badges-progressbar .badges-progressbar .progressbar-scale {
+  display: block;
+  height: 2px;
+  background: linear-gradient(0.25turn, #3D8EE1, #8371EA, #CC4CD3);
+}
+.motivation-card-double .up-block .up-block__badges-progressbar .progressbar-desc {
+  font-size: 13px;
+  line-height: 20px;
+  color: #989FA0;
+  margin-bottom: 0;
+}
+.motivation-card-double .down-block {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 24px 24px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+.motivation-card-double .down-block .down-block__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 19px;
+}
+.motivation-card-double .down-block .down-block__content .down-block__desc {
+  padding-left: 24px;
+}
+.motivation-card-double .down-block .down-block__content .down-block__desc h4 {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 24px;
+  color: #253639;
+  margin-bottom: 4px;
+}
+.motivation-card-double .down-block .down-block__content .down-block__desc p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 20px;
+  color: #4C595C;
+}
+.motivation-card-double .down-block button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #363638;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 22px;
+  color: #253639;
+  cursor: pointer;
+}
+
+.motivation__task-switch {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 36px;
+  margin-bottom: 32px;
+}
+.motivation__task-switch .tasks_title {
+  padding-right: 32px;
+}
+.motivation__task-switch .tasks_title h3 {
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 36px;
+  color: #253639;
+}
+.motivation__task-switch .tasks_cards {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 36px;
+  border-bottom: 1px solid #E7E7E7;
+}
+.motivation__task-switch .tasks_cards .card-active-switch, .motivation__task-switch .tasks_cards .card-active-involve {
+  cursor: pointer;
+}
+.motivation__task-switch .tasks_cards .card-active-switch span, .motivation__task-switch .tasks_cards .card-active-involve span {
+  font-size: 15px;
+  line-height: 22px;
+  color: #4C595C;
+}
+.motivation__task-switch .tasks_cards .card-active-switch {
+  margin-right: 24px;
+}
+.motivation__task-switch .tasks_cards .switch-active {
+  border-bottom: 2px solid #3572F2;
+}
+.motivation__task-switch .tasks_cards .switch-active span {
+  font-weight: bold;
+}
+
+.motivation__rules {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  width: 100%;
+  margin-bottom: 28px;
+  padding: 20px;
+  border: 1px solid #E7E7E7;
+  border-radius: 4px;
+}
+.motivation__rules h4 {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 28px;
+  color: #253639;
+  margin-bottom: 12px;
+}
+.motivation__rules p {
+  margin: 0;
+  font-size: 17px;
+  line-height: 24px;
+  color: #4C595C;
+}
+
+.motivation-task-switch {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #fff;
+  padding: 4px;
+  border-radius: 4px;
+  margin-bottom: 24px;
+}
+.motivation-task-switch .task-switch__tapes {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 0;
+}
+.motivation-task-switch .task-switch__tapes li {
+  margin-right: 12px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 22px;
+  color: #4C595C;
+  text-align: center;
+}
+.motivation-task-switch .task-switch__tapes li:last-child {
+  margin-right: 0;
+}
+.motivation-task-switch .task-switch__tapes .switch-active {
+  background-color: #F7F8FC;
+  border-radius: 4px;
+}
+.motivation-task-switch .task-switch__tapes .switch-active span {
+  color: #3572F2;
+}
+
+.motivation-tasks-block {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 32px;
+}
+.motivation-tasks-block .tasks-block__title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 24px;
+}
+.motivation-tasks-block .tasks-block__title h4 {
+  font-size: 17px;
+  line-height: 24px;
+  color: #253639;
+}
+.motivation-tasks-block .tasks-block__title span {
+  padding: 4px 8px;
+  background: #F7F8FC;
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 20px;
+  color: #4C595C;
+}
+
+.motivation-callange-item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 12px;
+  border-radius: 4px;
+}
+.motivation-callange-item .callange-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 18px 16px;
+  border: 1px solid #E7E7E7;
+  box-sizing: border-box;
+}
+.motivation-callange-item .callange-item .callange-item__title {
+  display: flex;
+  flex-direction: collumn;
+  padding: 0 24px 0 0;
+}
+.motivation-callange-item .callange-item .callange-item__title img {
+  margin-right: 24px;
+}
+.motivation-callange-item .callange-item .callange-item__title span {
+  font-size: 13px;
+  line-height: 20px;
+  color: #989FA0;
+  margin-bottom: 2px;
+}
+.motivation-callange-item .callange-item .callange-item__title p {
+  font-size: 17px;
+  line-height: 24px;
+  color: #253639;
+  margin: 0;
+}
+.motivation-callange-item .callange-item button {
+  font-size: 15px;
+  line-height: 22px;
+  color: #3572F2;
+}
+.motivation-callange-item .callange-item:hover {
+  border: none;
+  background-color: #FAFAFA;
+  border: 1px solid #FAFAFA;
+}
+.motivation-callange-item .callange-item__active {
+  border: none;
+  background-color: #FAFAFA;
+  border: 1px solid #FAFAFA;
+  margin-bottom: 12px;
+}
+.motivation-callange-item .callange-form {
+  width: 100%;
+  padding: 16px;
+  background: #FFFFFF;
+  border: 1px solid #E7E7E7;
+  border-radius: 4px;
+}
+.motivation-callange-item .callange-form form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.motivation-callange-item .callange-form form .form-title {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 24px;
+  color: #253639;
+  margin-bottom: 12px;
+}
+.motivation-callange-item .callange-form form .form-title span {
+  color: #C23D3C;
+}
+.motivation-callange-item .callange-form form .ui-kit-input {
+  margin-bottom: 24px;
+}
+.motivation-callange-item .callange-form form .added-file {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.motivation-callange-item .callange-form form .added-file p {
+  font-size: 17px;
+  line-height: 24px;
+  margin-bottom: 0;
+}
+.motivation-callange-item .callange-form form .added-file img {
+  margin-left: 18px;
+  cursor: pointer;
+}
+.motivation-callange-item .callange-form form .add-file {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 32px;
+}
+.motivation-callange-item .callange-form form .add-file label {
+  font-size: 17px;
+  line-height: 24px;
+  color: #363638;
+  margin: 0 12px 0 0;
+  cursor: pointer;
+}
+.motivation-callange-item .callange-form form .add-file img {
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+}
+.motivation-callange-item .callange-form form .add-file input {
+  display: none;
+}
+.motivation-callange-item .callange-form form .add-file span {
+  font-size: 13px;
+  line-height: 20px;
+  color: #848D8E;
+}
+.motivation-callange-item .callange-form form .form-textaria {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+  margin-bottom: 32px;
+  padding: 16px 40px 24px 16px;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 22px;
+  color: #848D8E;
+  border: 1px solid #E7E7E7;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.motivation-callange-item .callange-form form .form-textaria:focus {
+  border: 1px solid #363638;
+}
+.motivation-callange-item .callange-form form .form-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.motivation-callange-item .callange-form form .form-buttons button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 4px;
+  font-size: 15px;
+  line-height: 22px;
+  color: #253639;
+  cursor: pointer;
+  padding: 12px 32px;
+  margin-right: 20px;
+}
+.motivation-callange-item .callange-form form .form-buttons .button-purple {
+  background: #8371EA;
+  color: #fff;
+}
+
+.motivation-callange-item:last-child {
+  margin-bottom: 0;
+}
+
+.motivation-modal__background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(3, 38, 45, 0.3);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.5s ease 0s;
+  z-index: 10;
+}
+.motivation-modal__background .motivation-modal__body {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 10px;
+  transition: transform 0.5s ease 0s;
+}
+.motivation-modal__background .motivation-modal__body .motivation-modal__content {
   position: relative;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  background-color: #fff;
+  color: #353432;
+  width: 100%;
+  max-width: 880px;
+  border-radius: 4px;
+  padding: 28px 32px;
+}
+.motivation-modal__background .motivation-modal__body .motivation-modal__content h2 {
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 40px;
+  color: #253639;
+  margin-bottom: 24px;
+}
+.motivation-modal__background .motivation-modal__body .motivation-modal__content .content__bages-total {
+  margin-bottom: 28px;
+  padding: 8px 12px;
+  background: linear-gradient(0.25turn, #3D8EE1, #8371EA, #CC4CD3);
+  font-size: 17px;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+.motivation-modal__background .motivation-modal__body .motivation-modal__content p {
+  font-size: 17px;
+  line-height: 24px;
+  color: #253639;
+  margin: 32px 0 12px;
+}
+.motivation-modal__background .motivation-modal__body .motivation-modal__content .achive-done-title {
+  font-size: 15px;
+  line-height: 22px;
+  color: #4C595C;
+  margin: 0;
+}
+.motivation-modal__background .motivation-modal__body .motivation-modal__content .content__bages-achive-done {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 18px 16px;
+  border: 1px solid #E7E7E7;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.motivation-modal__background .motivation-modal__body .motivation-modal__content .achive-done-blcok {
+  display: flex;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  height: 130px;
-  background: #0D4552;
+  padding-right: 48px;
 }
-.motivation__header-footer .motivation__header-intro {
-  width: 600px;
-  height: 36px;
-  margin-top: 64px;
-  font-family: PT Sans;
-  font-style: normal;
-  font-weight: normal;
-  text-align: center;
-  font-size: 30px;
-  line-height: 100%;
+.motivation-modal__background .motivation-modal__body .motivation-modal__content .achive-done-blcok img {
+  margin-right: 24px;
+}
+.motivation-modal__background .motivation-modal__body .motivation-modal__content .achive-done {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 28px;
+  border: 1px solid #12B463;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 22px;
+  color: #12B463;
+}
+.motivation-modal__background .motivation-modal__body .motivation-modal__content .achive-block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 32px;
+  background-color: #D5D5D5;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 22px;
   color: #FFFFFF;
 }
 
-.motivation__header-switcher {
-  width: 640px;
-  position: absolute;
-  top: -30px;
-  height: 60px;
-  background: #FFFFFF;
-  border-radius: 100px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-}
-.motivation__header-switcher-red, .motivation__header-switcher-white {
-  width: 50%;
-  height: 60px;
-  font-family: PT Sans;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 130%;
-  padding: 6px;
-  text-align: center;
-}
-.motivation__header-switcher-red {
-  background: #9A1B1F;
-  border-radius: 100px;
-  color: #FFFFFF;
-}
-
-.motivation__header-categories {
-  width: 640px;
-  height: 100%;
-  color: white;
-  margin-top: 60px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-.motivation__header-categories ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
-.motivation__header-categories ul li {
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 100%;
-  color: #FFFFFF;
-}
-
-.motivation__content {
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 30px 30px 50px;
-  background-color: #E5E5E5;
-  background: linear-gradient(#E5E5E5 70%, #E6E1DE);
-}
-
-.motivation__card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding: 35px;
-  margin-bottom: 20px;
-  background: #FFFFFF;
-  box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 30.1471px 24.1177px rgba(0, 0, 0, 0.0456112), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 4.5288px 3.62304px rgba(0, 0, 0, 0.0243888);
-  border-radius: 15px;
-}
-.motivation__card-title {
-  width: 100%;
-  border-bottom: 1px solid #BDBDBD;
-  margin-bottom: 20px;
-}
-.motivation__card-title h2 {
-  font-family: PT Sans;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 100%;
-  color: #353432;
-  margin-bottom: 15px;
-}
-.motivation__card-list {
-  width: 100%;
-  padding: 20px 20px 5px 50px;
-  background: #CED6F2;
-  border-radius: 15px;
-  margin-bottom: 30px;
-}
-.motivation__card-list li {
-  list-style-type: disc;
-  font-family: PT Sans;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 22px;
-  line-height: 28px;
-  color: #353432;
-}
-.motivation__card-icons {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 624px;
-  height: 70px;
-  padding: 0 30px;
-}
-.motivation__card-icons-line-1, .motivation__card-icons-line-2 {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.motivation__card-icons-circle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 70px;
-  height: 70px;
-  margin: 0 17px;
-  border-radius: 100%;
-  margin-bottom: 20px;
-}
-.motivation__card-icons-circle img {
-  display: block;
-}
-.motivation__card .tiffany-color {
-  background-color: #CCEFFB;
-}
-.motivation__card .purple-color {
-  background-color: #FBCCE4;
-}
-.motivation__card-bages {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  align-items: center;
-  width: 100%;
-}
-.motivation__card-bages img {
-  display: block;
-  width: 250px;
-  height: auto;
-}
-.motivation__card-achivments {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  width: 100%;
-}
-.motivation__card-achiv-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  width: 210px;
-}
-.motivation__card-achiv-card .motivation__card-achiv-blocked {
-  width: 145px;
-  height: 145px;
-}
-.motivation__card-achiv-card h5, .motivation__card-achiv-card p {
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  font-weight: 600;
-  line-height: 140%;
-  color: #0D4552;
-}
-.motivation__card-achiv-card h5 {
-  font-size: 18px;
-}
-.motivation__card-achiv-card p {
-  font-size: 16px;
-}
-.motivation__card-arrow-bottom {
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-  width: 100%;
-  height: 19px;
-}
-.motivation__card-havecards {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  padding: 20px;
-}
-.motivation__card-havecards .havecards-1 {
-  width: 280px;
-  height: 425px;
-  border-radius: 15px;
-  box-shadow: 1px 2px 9px 2px rgba(71, 71, 71, 0.4);
-}
-.motivation__card-havecards .havecards-2 {
-  width: 283px;
-  height: 428px;
-}
-.motivation__card-instruction {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-.motivation__card-instruction-item {
-  width: 100%;
-  border-radius: 100px;
-  background-color: #CED6F2;
-  padding: 15px 35px;
-  margin-bottom: 15px;
-  text-align: left;
-  font-family: PT Sans;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 22px;
-  line-height: 28px;
-  color: #353432;
-}
-.motivation__card-instruction-item span {
-  color: #9A1B1F;
-  line-height: 1.15;
-  cursor: pointer;
-}
-.motivation__card-cards {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-self: center;
-  flex-wrap: wrap;
-  width: 100%;
-  margin: 20px 0 0;
-}
-.motivation__card-cards-item {
-  width: 245px;
-  height: 270px;
-  margin-bottom: 20px;
-  margin-top: 20px;
-}
-.motivation__card-cards-item h4 {
-  margin: 0;
-  text-align: center;
-  font-size: 24px;
-  line-height: 140%;
-  font-weight: bold;
-}
-.motivation__card-cards-item p {
-  font-weight: normal;
-  text-align: center;
-  font-size: 14px;
-  line-height: 140%;
-  margin-bottom: 15px;
-}
-.motivation__card-cards-item-first {
-  display: block;
-  width: 200px;
-  height: auto;
-  margin: 0 auto;
-  margin-top: 60px;
-}
-.motivation__card-cards-item-midle {
-  display: block;
-  width: 245px;
-  height: auto;
-  margin: 0 auto;
-}
-.motivation__card-cards-item-last {
-  display: block;
-  width: 170px;
-  height: auto;
-  margin: 0 auto;
-  margin-top: 35px;
-}
-
-.motivation__card-type-of-reward {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 10px;
-  border-bottom: 1px solid #BDBDBD;
-  margin-bottom: 38px;
-}
-.motivation__card-type-of-reward-item {
-  width: 100%;
-  height: 154px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-bottom: 30px;
-}
-.motivation__card-type-of-reward-item .left-side {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 110px;
-  font-family: PT Sans;
-  font-weight: bold;
-  color: #353432;
-}
-.motivation__card-type-of-reward-item .left-side h4 {
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 31px;
-  margin-bottom: 0px;
-  color: #9A1B1F;
-}
-.motivation__card-type-of-reward-item .left-side p {
-  font-size: 18px;
-  line-height: 23px;
-}
-.motivation__card-type-of-reward-item .right-side {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 580px;
-  min-height: 80px;
-  margin-left: 45px;
-  padding: 15px 16px;
-  background-color: #CED6F2;
-  border-radius: 15px;
-  color: #353432;
-}
-.motivation__card-type-of-reward-item .right-side ul {
-  margin: 0;
-  padding: 0;
-}
-.motivation__card-type-of-reward-item .right-side li {
-  list-style-type: disc;
-  font-family: PT Sans;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 23px;
-}
-.motivation__card-type-of-reward-item .right-side span {
-  margin: 0;
-  padding: 0;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 31px;
-}
-.motivation__card-type-of-reward-btn {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin-bottom: 15px;
-}
-.motivation__card-type-of-reward-btn button {
-  width: 400px;
-  height: 50px;
-  background: #9A1B1F;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 40px;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 31px;
-  text-align: center;
-  color: #FFFFFF;
+.motivation-modal-show {
+  opacity: 1;
+  visibility: visible;
 }
 
 .services__wrapper {

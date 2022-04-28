@@ -339,6 +339,7 @@
 </div>
 </template>
 <script>
+
 import {required, maxLength, url, helpers} from 'vuelidate/lib/validators';
 
 function checkLink (value)

@@ -327,3 +327,9 @@ Route::group(['middleware' => [
     });
     
 });
+
+////////////////////////////////////
+// Мотивация
+////////////////////////////////////
+
+Route::get('/motivation', [\App\Http\Controllers\MotivationController::class, 'index']);

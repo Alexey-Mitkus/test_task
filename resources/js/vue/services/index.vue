@@ -69,8 +69,8 @@
                     <span class="number">06</span>
                     <div>
                         <img width="80px" height="80px" src="/images/services/services_Knowledge_base_innactive.svg" alt="">
-                        <h3>База знаний</h3>
-                        <p>Поможет получить доступ к полезной информации</p>
+                        <h3>Банк идей</h3>
+                        <p>Поможет собрать все идеи и предложения</p>
                     </div>
                     <div class="innactive-info">   
                     <button>Подробнее</button>
