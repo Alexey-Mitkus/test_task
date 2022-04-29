@@ -68,7 +68,7 @@
                 <div @click="index = 6" class="services__item-innactive" tabindex="0">
                     <span class="number">06</span>
                     <div>
-                        <img width="80px" height="80px" src="/images/services/services_Knowledge_base_innactive.svg" alt="">
+                        <img width="80px" height="80px" src="/images/services/services_Bank_of_idea_innactive.svg" alt="">
                         <h3>Банк идей</h3>
                         <p>Поможет собрать все идеи и предложения</p>
                     </div>

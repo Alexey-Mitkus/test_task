@@ -359,7 +359,7 @@
 .ui-kit__accardeon {
   display: flex;
   flex-wrap: wrap;
-  justify-content: start;
+  justify-content: flex-start;
   margin-top: 12px;
   margin-bottom: 16px;
   padding: 0 16px;
@@ -419,7 +419,7 @@
 .ui-kit__accardeon .ui-kit__accardeon-content {
   display: none;
   flex-wrap: wrap;
-  justify-content: start;
+  justify-content: flex-start;
   width: 100%;
   padding-bottom: 20px;
 }

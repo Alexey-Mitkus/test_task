@@ -3,8 +3,9 @@
         <!-- acordeon title -->
 
         <label :for="id">{{ title }}</label>
-        <input type="checkbox" :id="id" class="ui-kit__accardeon-show">
-        
+        <input v-if="user" type="checkbox" :id="id" class="ui-kit__accardeon-show">
+        <input v-else type="checkbox" :id="id" class="ui-kit__accardeon-show" checked>
+
         <span class="open-accardeon-icon"></span>
         <span class="open-accardeon-icon2"></span>
 
@@ -18,7 +19,7 @@
 
 export default {
     name: 'Accardeon',
-    props: ['id', 'title'],
+    props: ['id', 'title', 'user'],
     data () {
         return {
         }

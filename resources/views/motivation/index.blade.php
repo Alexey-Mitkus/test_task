@@ -22,8 +22,10 @@
             {{-- Motivation --}}
             <div class="col-lg-9 col-md-12 mt-4 pb-5">
                 {{-- vue component --}}
-                <motivation-index></motivation-index>                 
-            </div>
+                <motivation-index 
+                    user="{{ $user }}" 
+                    bages ='{{ $bages }}'                
+                ></motivation-index>
         </div>
     </div> 
 

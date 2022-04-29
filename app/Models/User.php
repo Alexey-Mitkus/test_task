@@ -12,6 +12,7 @@ use Cviebrock\EloquentSluggable\Sluggable;
 use Nicolaslopezj\Searchable\SearchableTrait;
 use App\Traits\UserFieldTrait;
 use App\Traits\ImageRepositoryTrait;
+use App\Models\motivation\MotivationTiket;
 
 
 class User extends Authenticatable implements MustVerifyEmail
@@ -241,5 +242,9 @@ class User extends Authenticatable implements MustVerifyEmail
     public function getPicturesArrayAttribute()
     {
         return config('users.userpic.sizes');
+    }
+
+    public function motivationTiket() {
+        return $this->hasMany(MotivationTiket::class);    
     }
 }

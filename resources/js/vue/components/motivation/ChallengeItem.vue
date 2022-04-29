@@ -5,7 +5,7 @@
             <img :src="challenge.image" alt="">
             
             <div>
-                <span>{{ challenge.points }} баллов</span>
+                <span>{{ challenge.count }} баллов</span>
                 <p>{{ challenge.title }}</p>
             </div>
         </div>
@@ -56,8 +56,6 @@
 
 <script>
 
-
-
 export default {
     name: 'MotivationChallengeItem',
     props: {
@@ -70,7 +68,6 @@ export default {
             file: null,
             link: '',
             message: '',
-            id: 0,
         }
     },
     methods: {
@@ -95,21 +92,19 @@ export default {
         sendMessage() {
             let formData = new FormData();
 
+            formData.append('program_id', this.challenge.id);
             formData.append('message', this.message);
             formData.append('link', this.link);
             formData.append('file', this.file);
-            formData.append('id', this.id);
 
-            console.log(formData);
-
-            // axios.post(route('/'), formData, {
-            //     headers: {
-            //         'Content-Type': 'multipart/form-data'
-            //     }
-            // })
-            // .then(res => {
-                
-            // })
+            axios.post('/motivation-get-prize', formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                }
+            })
+            .then(res => {
+                console.log(res);
+            })
             
         }
     }, 

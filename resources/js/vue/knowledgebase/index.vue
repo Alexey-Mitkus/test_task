@@ -47,6 +47,7 @@
                 </ul>
             </li>
         </ul>
+        <!--  -->
         
         <!-- formats -->
         <ul class="kb__filters" tabindex="0">
@@ -86,11 +87,14 @@
 
     <!-- cards -->
     <div class="kb-content__cards">
-
+        <!--  -->
         <template v-if="cards.length > 0">
             <div v-for="card in cards" :key="card.id" class="kb-content__card" :class="{'choosen': false}">
                 <div>
-                    <span class="kb-content__card-format">{{ card.format[0].name }}</span>
+                    <div class="kb-content__card-format">
+                        <span class="card-format">{{ card.format[0].name }}</span>
+                        <span v-if="card.lang !== 'rus'" class="card-format ml-2">{{ card.lang }}</span>
+                    </div>
                     <img v-if="card.image" :src="card.image" alt="">
                     <img  v-else src="/images/knowledge-base/knowleadge-base_cover.png" alt="">
                     <div class="kb-content__card-tags">

@@ -108,7 +108,11 @@
                         <img v-if="delArray.length < 1" @click="delCard(card)" 
                             src="/images/knowledge-base/knowleadge-base_delete-func.svg" alt="">
                     </div>
-                    <span class="kb-content__card-format">{{ card.format[0].name }}</span>
+                    <div class="kb-content__card-format">
+                        <span class="card-format">{{ card.format[0].name }}</span>
+                        <span v-if="card.lang !== 'rus'" class="card-format ml-2">{{ card.lang }}</span>
+                    </div>
+                    <!-- <span class="kb-content__card-format">{{ card.format[0].name }}</span> -->
                     <img v-if="!card.image" src="/images/knowledge-base/knowleadge-base_cover.png" alt="">
                     <img v-else :src="card.image" alt="">
                     <div class="kb-content__card-tags">
@@ -141,7 +145,10 @@
                         <img v-if="delArray.length < 1" @click="delCard(card)" 
                             src="/images/knowledge-base/knowleadge-base_delete-func.svg" alt="">
                     </div>
-                    <span v-if="card.format[0].name != false" class="kb-content__card-format">{{ card.format[0].name }}</span>
+                    <div class="kb-content__card-format">
+                        <span class="card-format">{{ card.format[0].name }}</span>
+                        <span v-if="card.lang !== 'rus'" class="card-format ml-2">{{ card.lang }}</span>
+                    </div>
                     <img v-if="!card.image" src="/images/knowledge-base/knowleadge-base_cover.png" alt="">
                     <img v-else :src="card.image" alt="">
                     <div class="kb-content__card-tags">

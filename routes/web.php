@@ -333,3 +333,11 @@ Route::group(['middleware' => [
 ////////////////////////////////////
 
 Route::get('/motivation', [\App\Http\Controllers\MotivationController::class, 'index']);
+
+Route::group(['middleware' => [
+    'auth',
+    'verified'
+]], function(){ 
+
+});
+Route::post('/motivation-get-prize', [\App\Http\Controllers\MotivationTiketController::class, 'storePrize'])->name('motivation-get-prize');
